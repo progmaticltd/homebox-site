@@ -1,0 +1,11 @@
+body {
+    padding: 4pt;
+}
+
+.clear {
+    clear:both;
+}
+
+div.section {
+    padding-bottom:15em;
+}

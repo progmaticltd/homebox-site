@@ -1,0 +1,55 @@
+/* default root styles */
+
+body {
+    font-family: "Tahoma", sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: gray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: .5em .1em;
+    font-size: 65%;
+    height: 2em;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin: 0 1em;
+    padding: 0;
+}
+
+footer p span.small {
+    margin: 0 .5em;
+}
+
+header div {
+    height: 2em;
+    background-color: black;
+    color: white;
+    text-align: right;
+    letter-spacing: 2px;
+    padding: .5em .1em;
+    vertical-align: middle;
+}
+
+header div span {
+    margin: 0 1em;
+}
+
+header div span a {
+    text-decoration: none;
+}
+
+header div span a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}

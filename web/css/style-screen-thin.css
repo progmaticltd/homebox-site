@@ -1,0 +1,40 @@
+/* Styles */
+header h1 {
+    font-size: 16pt;
+}
+header p.subtitle {
+    font-size: 10pt;
+}
+header p.subsubtitle {
+    font-size: 8pt;
+}
+header p {
+    font-size: 8pt;
+}
+#contact span.clb, .extra-details {
+}
+
+h1 {
+    font-size: 13pt;
+}
+
+h2 {
+    font-size: 12pt;
+}
+
+h3 {
+    font-size: 11pt;
+}
+
+p,li {
+    font-size: 10pt;
+}
+#jabber-url {
+    display: none;
+}
+
+div.home #qrcode img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

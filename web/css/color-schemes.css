@@ -1,0 +1,23 @@
+/* Defaults */
+:root {
+    --color-scheme-background: white;
+    --color-scheme-text-color: black;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background: #fff;
+        color:  #222;
+        transition: background-color 2s;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background:  #222;
+        color: #ddd;
+        transition: background-color 2s;
+    }
+}

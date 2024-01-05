@@ -1,0 +1,36 @@
+/* default root styles */
+
+#contact ul, #contact li {
+    list-style-type:none;
+    padding-left:0;
+    margin-left:0;
+}
+#contact ul {
+    margin-top:0;
+}
+#contact span.clb {
+    font-weight:bolder;
+}
+
+/* links */
+a {
+    opacity: 0.8;
+    color: inherit;
+}
+a:hover {
+    opacity: 1;
+    border: none;
+}
+a.no-decoration {
+    border: none;
+}
+
+/* links */
+h2 a, div#contact a {
+    color: inherit;
+    text-decoration: none;
+    border: none;
+}
+.print-only {
+    display: none;
+}

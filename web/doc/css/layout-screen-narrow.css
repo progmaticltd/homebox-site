@@ -1,0 +1,25 @@
+div.job {
+}
+
+div.task {
+}
+
+div.generic {
+}
+
+aside {
+}
+
+div.category {
+    float: left;
+    width: 49%;
+    margin-right:1%;
+}
+
+div.category:nth-child(2n+2) {
+    clear: both;
+}
+
+div.category#other {
+    display:none;
+}

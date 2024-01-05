@@ -1,0 +1,27 @@
+/* fonts */
+header h1 {
+    font-variant: small-caps;
+    font-size: 24pt;
+}
+header p.subtitle {
+    font-size: 16pt;
+}
+header p.subsubtitle {
+    font-size: 14pt;
+}
+
+h1 {
+    font-size: 14pt;
+}
+
+h2 {
+    font-size: 13pt;
+}
+
+h3 {
+    font-size: 12pt;
+}
+
+p,li {
+    font-size: 11pt;
+}

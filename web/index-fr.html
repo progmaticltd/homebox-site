@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Homebox</title>
+        <!-- site global css -->
+        <link rel="stylesheet" media="screen" href="/css/global-screen-all.css">
+        <link rel="stylesheet" media="screen" href="/css/palette-screen.css">
+        <link rel="stylesheet" media="all" href="/css/style-all.css">
+        <link rel="stylesheet" media="all" href="/css/home.css">
+        <!-- specific stylesheets -->
+        <link rel="stylesheet" media="all" href="/css/features.css">
+        <!-- screen layouts -->
+        <link rel="stylesheet" media="screen" href="/doc/css/layout-screen-all.css">
+        <link rel="stylesheet" media="screen and (min-width:800px)" href="/doc/css/layout-screen-default.css">
+        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/doc/css/layout-screen-narrow.css">
+        <link rel="stylesheet" media="screen and (max-width:500px)" href="/doc/css/layout-screen-thin.css">
+        <!-- screen styles -->
+        <link rel="stylesheet" media="screen" href="/doc/css/style-screen-all.css">
+        <link rel="stylesheet" media="screen and (min-width:800px)" href="/css/style-screen-default.css">
+        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/css/style-screen-narrow.css">
+        <link rel="stylesheet" media="screen and (max-width:500px)" href="/css/style-screen-thin.css">
+        <!-- dark/light color schemes -->
+        <link rel="stylesheet" href="/css/color-schemes.css">
+        <!-- favicon and other details -->
+        <link rel="shortcut icon" type="image/jpg" href="/img/homebox.png">
+    </head>
+    <body>
+        <header>
+            <h1 class="color-primary-0">HomeBox</h1>
+            <div class="toolbar top">
+                <span><a href="index-en.html">🇬🇧 English</a></span>
+                <span><a href="index-fr.html" class="active">🇫🇷 Français</a></span>
+            </div>
+        </header>
+        <div>
+            <p>Homebox est une solution d'auto-hébergement, qui vous permet de gérer vos informations personnelles comme
+                vos emails, vos contacts, vos calendriers et bien plus encore, de la manière la plus sûre mais toujours
+                la plus simple possible.  Il est particulièrement adapté aux familles et aux petites communautés.
+            </p>
+
+            <p>Ce projet est fait pour vous si :</p>
+            <ul>
+                <li>Vous souhaitez héberger vous-même vos e-mails et vos informations personnelles, pour des raisons de
+                    confidentialité, de sécurité, de liberté, de plaisir, etc.</li>
+                <li>Vous souhaitez que votre serveur soit sécurisé contre les intrusions physiques et à distance.</li>
+                <li>Vous souhaitez un système nécessitant peu de maintenance et se mettant à jour automatiquement.</li>
+                <li>Vous faites confiance à la communauté Debian pour publier des mises à jour de sécurité.</li>
+            </ul>
+
+            <p>Il utilise un ensemble de scripts Ansible pour configurer l'ensemble de la plateforme à partir d'un
+                serveur Debian fraîchement installé.  Par conséquent, vous devez être familier avec Ansible et la ligne
+                de commande.  Le système peut être installé sur un serveur autonome à la maison, ou sur un serveur dédié
+                ou virtuel hébergé en ligne.
+            </p>
+
+            <div class="section clear">
+                <h2 class="color-primary-1">Caractéristiques système</h2>
+
+                <div class="category" id="debian-run">
+                    <h3 class="color-secondary-1-0">Fonctionne sur Debian</h3>
+                    <p>Fonctionne sur un système Debian standard sans paquets ni fichiers binaires tiers et sans modifier
+                        les fichiers système. Toutes les fonctionnalités principales nécessitent uniquement des
+                        packages de Debian Bookworm, sans même utiliser de sections non-free ou contrib. Une seule
+                        fonctionnalité facultative peut être installée à l'aide d'un dépôt tiers,
+                        mais <em>toujours</em> reçoit des mises à jour de sécurité.
+                    </p>
+                </div>
+
+                <div class="category" id="tls-encryption">
+                    <h3 class="color-secondary-1-0">Chiffrage TLS fort</h3>
+                    <p>Tous les certificats sont générés automatiquement à l'aide de LetsEncrypt avec la méthode DNS, plus sûre.
+                        Les sites bénéficient automatiquement du grade A+, avec
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>
+                        mis en œuvre pour empêcher l’interception du trafic.
+                    </p>
+                </div>
+
+                <div class="category" id="modern-dns">
+                    <h3 class="color-secondary-1-0">Serveur DNS moderne</h3>
+		    <p>Un serveur DNS est implémenté avec des fonctionnalités de pointe.
+                         Grâce à <a target="_blank" href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>,
+                         chaque enregistrement est signé à l'aide d'une infrastructure à clé publique.
+                         <a target="_blank" href="https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization">Enregistrements CAA</a>,
+                         pour certifier l'origine de vos certificats, empêchant toute autre organisation que LetsEncrypt de créer des certificats
+			 avec votre nom de domaine.
+		    </p>
+                </div>
+
+                <div class="category" id="ssh-fingerprint">
+		  <h3 class="color-secondary-1-0">Enregistrements d'empreintes digitales SSH</h3>
+                  <p>Pour éviter toute intervention intermédiaire lors de l'utilisation de connexions SSH, les clés publiques sont publiées sur le serveur DNS,
+		  en utilisant <a target="_blank" href="https://en.wikipedia.org/wiki/SSHFP_record">Enregistrements SSHFP</a>,
+		  autrement dit empreintes digitales SSH. Cela vous permet également d'établir des connexions SSH sans avoir à gérer le fichier known_hosts.
+                  </p>
+                </div>
+
+                <div class="category" id="authentication-mgmt">
+		  <h3 class="color-secondary-1-0">Source d'authentification unique</h3>
+                  <p>Les utilisateurs sont authentifiés à l'aide de l'annuaire OpenLDAP comme source unique.
+                  Les mots de passe initiaux sont générés automatiquement et les politiques de mots de passe et l'âge maximum sont appliqués.
+                  Les utilisateurs et les informations d'identification du système peuvent être stockés à l'aide de l'excellent
+                  <a target="_blank" href="https://passwordstore.org/">utilitaire de passe</a>.
+                  Enfin, les utilisateurs peuvent facilement modifier leur mot de passe à l'aide d'une interface Web très simple.
+                  </p>
+                </div>
+
+                <div class="category" id="integrated-backup">
+		  <h3 class="color-secondary-1-0">Sauvegarde intégrée</h3>
+                     <p>Le système est livré avec le <a target="_blank" href="https://www.borgbackup.org">système de sauvegarde borg</a>,
+                         configuration pour sauvegarder les e-mails, ainsi que les calendriers et les contacts de tous les utilisateurs.
+                         Plusieurs destinations de sauvegarde peuvent être spécifiées, avec plusieurs fréquences également.
+                         Les cibles peuvent être un disque physique connecté monté dans un répertoire,
+                         ou un même système distant, en utilisant Samba ou SFTP.
+                     </p>
+                </div>
+            </div>
+
+	    <div class="section clear">
+                 <h2 class="color-primary-1">Fonctionnalités de sécurité</h2>
+
+                 <div class="category" id="app-armor">
+                     <h3 class="color-secondary-1-0">Utilisation d'AppArmor</h3>
+                     <p>Tous les services exécutés sous des profils <a target="_blank" href="https://www.apparmor.net/">AppArmor</a> dédiés.
+                     Cela protège de manière proactive le système d'exploitation et les applications contre les menaces externes ou internes,
+		     même les attaques du jour zéro. Il impose un bon comportement et empêche l’exploitation des failles d’application connues et inconnues.
+                     </p>
+                 </div>
+
+                 <div class="category" id="auto-updates">
+                     <h3 class="color-secondary-1-0">Mises à jour automatiques</h3>
+                     <p>Les mises à jour standard et de sécurité sont automatiquement installées à l'aide du paquet Debian.
+                         <a href="https://wiki.debian.org/UnattendedUpgrades">unattended-upgrades</a>.
+                         Les services sont automatiquement redémarrés en cas de besoin, minimisant la maintenance tout en augmentant la sécurité.
+                         Le système peut également être configuré pour redémarrer automatiquement lorsque le noyau a été mis à jour.
+                         Enfin, un e-mail est automatiquement envoyé au postmaster lorsque les packages ont été mis à niveau ou
+			 lorsque le système a été redémarré.
+                     </p>
+                 </div>
+
+                 <div class="category" id="pare-feu">
+                     <h3 class="color-secondary-1-0">Pare-feu puissant</h3>
+                     <p>Les connexions entrantes et sortantes sont filtrées à l'aide de nftables modernes. Pour les
+		     connexions entrantes, seuls les services publics sont autorisés. Pour les connexions sortantes, seul le trafic
+		     nécessaire est autorisé, et une liste blanche de proxy est utilisée qui permet uniquement d'accéder uniquement aux sites
+		     requis, par exemple les mises à jour de sécurité Debian ou les sites liés à LetsEncrypt, Enfin, les échecs
+		     d'authentification bannissent automatiquement les adresses IP utilisant nftables.
+		     </p>
+                 </div>
+             </div>
+
+             <div class="section clear">
+                 <h2 class="color-primary-1">Gestion des communications et des informations personnelles</h2>
+
+                 <div class="category" id="webmail">
+                     <h3 class="color-secondary-1-0">Interface web réactive</h3>
+                     <p>Vous pouvez accéder à vos e-mails, calendriers et contacts à l'aide d'un navigateur Web moderne,
+		     depuis un ordinateur de bureau ou un client mobile,
+                     grâce à l'interface web agréable et réactive implémentée par <a target="_blank" href="https://sogo.nu/">SOGo</a>.
+                     Pour plus de sécurité, une authentification facultative à deuxième facteur peut être ajoutée, en utilisant la norme TOTP.
+                     </p>
+                 </div>
+
+                 <div class="category" id="mail-autoconfig">
+                     <h3 class="color-secondary-1-0">Détection des paramètres de messagerie</h3>
+                     <p>Des enregistrements DNS spéciaux et des paramètres Web sont générés, permettant à tout client de messagerie moderne de détecter les paramètres.
+                         Fonctionne avec les clients de bureau, comme Thunderbird, Evolution, Outlook, etc. et les clients mobiles
+                         comme <a target="_blank" href="https://k9mail.app/">K-9 Mail</a> ou
+                         <a target="_blank" href="https://email.faircode.eu/">FairEmail</a>.
+                     </p>
+                 </div>
+
+                 <div class="category" id="mail-antispam">
+                     <h3 class="color-secondary-1-0">Antispam moderne</h3>
+                     <p>L'antispam choisi est <a href="https://www.rspamd.com/" target="_blank">rspamd</a>,
+                         qui est à la fois puissant et extrêmement simple à utiliser.
+                         Les e-mails reconnus comme indésirables sont automatiquement placés dans le dossier Courrier indésirable dès leur réception.
+                         Pour les courriers indésirables manqués, leur déplacement dans le dossier indésirable entraîne automatiquement le système.
+                         À l'inverse, en déplaçant un e-mail hors du dossier Courrier indésirable, marquez l'e-mail comme valide, c'est-à-dire <em>ham</em>.
+                     </p>
+                 </div>
+
+                 <div class="category" id="mail-antivirus">
+                     <h3 class="color-secondary-1-0">Antivirus en option</h3>
+                     <p>Vous pouvez utiliser l'excellent antivirus Clam-AV pour vérifier la saisie des emails,
+                         ainsi que ceux envoyés par les utilisateurs. Les e-mails contenant des virus peuvent être supprimés ou rejetés en silence,
+                         tandis que les e-mails sortants contenant des virus sont renvoyés.
+                     </p>
+                 </div>
+
+		 <div class="category" id="jabber">
+                     <h3 class="color-secondary-1-0">Serveur Jabber</h3>
+                     <p>Vous pouvez également installer un serveur Jabber, qui vous permet d'envoyer des messages à toute personne utilisant Jabber,
+                         sur le même serveur ou sur d'autres domaines. Le serveur prend en charge les appels audio et vidéo depuis les téléphones mobiles.
+                         Les messages peuvent également être cryptés à l'aide d'Omemo ou de GPG, si votre client le prend en charge.
+                     </p>
+                 </div>
+
+                 <div class="category" id="webdav">
+                     <h3 class="color-secondary-1-0">Stockage de fichiers personnels</h3>
+                     <p>Les utilisateurs peuvent stocker et sauvegarder leurs fichiers personnels, depuis un ordinateur ou depuis un téléphone.
+                     Le protocole utilisé est WebDAV et l'authentification repose sur le serveur LDAP standard.
+                     </p>
+                 </div>
+	     </div>
+
+	     <div class="section clear">
+                 <h2 class="color-primary-1">Autres fonctionnalités</h2>
+
+                 <div class="category" id="flexible-ip-support">
+                     <h3 class="color-secondary-1-0">Prise en charge flexible des adresses IP</h3>
+                     <p>Prise en charge soit d'une adresse IPv4 seule, soit d'une adresse IPv6, soit un mélange des deux.
+                         Le système crée et conserve automatiquement tous les enregistrements DNS.
+                     </p>
+                 </div>
+
+                 <div class="category" id="default-site">
+                     <h3 class="color-secondary-1-0">Site par défaut</h3>
+                     <p>Générez un squelette de site par défaut pour votre domaine.
+                     Cela vous permet de vous concentrer sur le contenu de votre site sans avoir à gérer la gestion des certificats
+		     ni la configuration de Nginx.
+                     </p>
+                 </div>
+
+                 <div class="category" id="monitoring">
+                     <h3 class="color-secondary-1-0">Surveillance et alerte</h3>
+                     <p>Surveillance facultative à l'aide de Prometheus et de tableaux de bord Grafana préconfigurés pour chaque service majeur.
+                     Les alertes sont envoyées à la fois par courrier électronique à une adresse électronique externe et également via Jabber.
+                     </p>
+                 </div>
+
+                 <div class="category" id="web-keys-directory">
+                     <h3 class="color-secondary-1-0">Répertoire des clés Web GPG</h3>
+                     <p>Si vous utilisez GPG, <em>Homebox</em> peut publier automatiquement votre clé publique à l'aide d'un
+                         <a href="https://wiki.gnupg.org/WKD" target="_blank">répertoire de clés Web</a>.
+                         Vos contacts pourront retrouver et importer votre clé publique automatiquement,
+                         et vous envoyer des emails cryptés plus facilement.
+                     </p>
+                 </div>
+
+		 <div class="section clear">
+                 <h2 class="color-primary-1">Fonctionnalités de développement</h2>
+
+                 <div class="category" id="granular-role">
+                     <h3 class="color-secondary-1-0">Installation et désinstallation de fonctions</h3>
+                     <p>La plupart des fonctionnalités peuvent être installées et désinstallées indépendamment, sans interrompre le système.
+                         Par exemple, l'antivirus peut être installé à des fins de test, puis désinstallé.
+                         Chaque fonctionnalité est installée à l'aide d'un rôle Ansible spécifique. Une fois une fonctionnalité installée,
+                         il est possible d'exécuter des tâches d'autodiagnostic pour s'assurer que le rôle a été correctement installé.
+                     </p>
+                 </div>
+
+                 <div class="category" id="dev-friendly">
+                     <h3 class="color-secondary-1-0">Convivial pour les développeurs</h3>
+                     <p>Un rôle dédié pour déployer des outils utiles à des fins de diagnostic et de développement.
+                         Une fois le développement terminé, les outils peuvent également être désinstallés.
+                         Chaque rôle prend en charge les indicateurs <em>développement</em> et <em>debug</em>,
+                         qui génèrent une configuration de journalisation spécifique ou simplement détaillée.
+                     </p>
+                 </div>
+
+                 <div class="category" id="linting">
+                     <h3 class="color-secondary-1-0">Qualité du code</h3>
+                     <p>Pour garantir la qualité du code, chaque rôle est vérifié via ansible-lint avant chaque push, à l'aide de git-hooks.
+                         Tout shell déployé sur le serveur est également vérifié à l'aide de <em>shellcheck</em>, pour garantir qu'aucune erreur n'est contenue.
+                     </p>
+                 </div>
+
+             </div>
+
+             <footer id="credentials">
+            <p>
+                <span class="small"><a target="_blank" href="https://dnssec-analyzer.verisignlabs.com/homebox.space">DNSSEC</a></span>
+                <span class="small"><a target="_blank" href="https://www.ssllabs.com/ssltest/analyze.html?d=homebox.space&amp;latest">TLS</a></span>
+                <span class="small"><a target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhomebox.space%2F">HTML5</a></span>
+                <span class="small"><a target="_blank" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhomebox.space">CSS</a></span>
+            </p>
+        </footer>
+    </body>
+</html>
