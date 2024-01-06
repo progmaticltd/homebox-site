@@ -42,7 +42,8 @@ header div span a {
     text-decoration: none;
 }
 
-header div span a.active {
+header a.active {
     text-decoration: underline;
     font-weight: bold;
+    opacity: 1;
 }
