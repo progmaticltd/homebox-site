@@ -4,10 +4,11 @@ body {
 
 .clear {
     clear:both;
+    display: block;
 }
 
 div.section {
-    padding-bottom:2em;
+    margin:2em;
 }
 
 header div {
