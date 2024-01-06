@@ -7,5 +7,36 @@ body {
 }
 
 div.section {
-    padding-bottom:15em;
+    padding-bottom:2em;
+}
+
+header div {
+    height: 2em;
+    letter-spacing: 2px;
+    vertical-align: middle;
+}
+
+header div span a {
+    text-decoration: none;
+}
+
+header div span a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+header ul#languages ul {
+    margin: 0;
+    padding: 0;
+}
+
+header ul#languages li {
+    margin: 0 auto;
+    padding: 0 4pt;
+    display: inline;
+}
+
+header ul#languages span {
+    margin: 0 auto;
+    display: inline;
 }

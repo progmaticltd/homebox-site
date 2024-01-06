@@ -13,6 +13,7 @@ aside {
 div.category {
 }
 
-div#qrcode {
-    display: none
+
+header ul#languages span.lang-name {
+    display: none;
 }

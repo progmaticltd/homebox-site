@@ -31,18 +31,11 @@ footer p span.small {
     margin: 0 .5em;
 }
 
+
 header div {
-    height: 2em;
     background-color: black;
     color: white;
     text-align: right;
-    letter-spacing: 2px;
-    padding: .5em .1em;
-    vertical-align: middle;
-}
-
-header div span {
-    margin: 0 1em;
 }
 
 header div span a {
