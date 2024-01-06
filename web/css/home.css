@@ -47,3 +47,7 @@ header a.active {
     font-weight: bold;
     opacity: 1;
 }
+
+div.main-content {
+    padding-bottom: 2em;
+}

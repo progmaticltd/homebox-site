@@ -29,7 +29,7 @@
     </head>
     <body>
         <!--# include file=".include/header.html" -->
-        <div>
+        <div class="main-content clear">
             <p>Homebox est une solution libre et open-source d'auto-hébergement, basée sur Debian GNU/Linux.
                 Elle vous permet de gérer vos informations personnelles comme vos emails, vos contacts, vos calendriers
                 et bien plus encore, de la manière la plus sûre mais toujours la plus simple possible. Il est
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="category" id="ssh-fingerprint">
-                    <h3 class="color-secondary-1-0">Enregistrements d'empreintes digitales SSH</h3>
+                    <h3 class="color-secondary-1-0">Empreintes « digitales » SSH</h3>
                     <p>Pour éviter toute intervention intermédiaire lors de l'utilisation de connexions SSH, les clés publiques sont publiées sur le serveur DNS,
                         en utilisant <a target="_blank" href="https://en.wikipedia.org/wiki/SSHFP_record">Enregistrements SSHFP</a>,
                         autrement dit empreintes digitales SSH. Cela vous permet également d'établir des connexions SSH sans avoir à gérer le fichier known_hosts.
@@ -104,8 +104,6 @@
                     <h3 class="color-secondary-1-0">Source d'authentification unique</h3>
                     <p>Les utilisateurs sont authentifiés à l'aide de l'annuaire OpenLDAP comme source unique.
                         Les mots de passe initiaux sont générés automatiquement et les politiques de mots de passe et l'âge maximum sont appliqués.
-                        Les utilisateurs et les informations d'identification du système peuvent être stockés à l'aide de l'excellent
-                        <a target="_blank" href="https://passwordstore.org/">utilitaire de passe</a>.
                         Enfin, les utilisateurs peuvent facilement modifier leur mot de passe à l'aide d'une interface Web très simple.
                     </p>
                 </div>
@@ -185,6 +183,7 @@
                         Pour les courriers indésirables manqués, leur déplacement dans le dossier indésirable entraîne automatiquement le système.
                         À l'inverse, en déplaçant un e-mail hors du dossier Courrier indésirable, marquez l'e-mail comme valide, c'est-à-dire <em>ham</em>.
                     </p>
+                    <p class="details">💡 <a href="mail-antispam-fr.html" title="screenshot">Voir plus de détails</a></p>
                 </div>
 
                 <div class="category" id="mail-antivirus">
@@ -196,7 +195,7 @@
                 </div>
 
                 <div class="category" id="mail-advanced">
-                    <h3 class="color-secondary-1-0">Caractéristiques avancés du serveur de mails</h3>
+                    <h3 class="color-secondary-1-0">Caractéristiques mails avancés</h3>
                     <p>Le serveur est doté de fonctionnalités avancées, certaines incluses par défaut, d’autres facultatives pour des utilisateurs
                         spécifiques. Par exemple, par défaut, les quotas, les filtres côté serveur, les dossiers virtuels,
                         les contrôles de confidentialité ou la copie automatique dans le dossier « envoyé », sont inclus.
@@ -210,7 +209,7 @@
                     <h3 class="color-secondary-1-0">Serveur Jabber</h3>
                     <p>Vous pouvez également installer un serveur Jabber, qui vous permet d'envoyer des messages à toute personne utilisant Jabber,
                         sur le même serveur ou sur d'autres domaines. Le serveur prend en charge les appels audio et vidéo depuis les téléphones mobiles.
-                        Les messages peuvent également être cryptés à l'aide d'Omemo ou de GPG, si votre client le prend en charge.
+                        Les messages peuvent également être chiffrés à l'aide d'Omemo ou de GPG, si votre client le prend en charge.
                     </p>
                 </div>
             </div>
@@ -252,7 +251,7 @@
                     <p>Si vous utilisez GPG, <em>Homebox</em> peut publier automatiquement votre clé publique à l'aide d'un
                         <a href="https://wiki.gnupg.org/WKD" target="_blank">répertoire de clés Web</a>.
                         Vos contacts pourront retrouver et importer votre clé publique automatiquement,
-                        et vous envoyer des emails cryptés plus facilement.
+                        et vous envoyer des emails chiffrés plus facilement.
                     </p>
                     <p class="details">💡 <a href="webkeys-directory-fr.html" title="screenshot">Plus de details</a>.</p>
                 </div>
@@ -298,8 +297,8 @@
                     </p>
                 </div>
             </div>
+            <div class="clear">&nbsp;</div>
         </div>
-        <br class="clear">
         <!--# include file=".include/footer.html" -->
     </body>
 </html>

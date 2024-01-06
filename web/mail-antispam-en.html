@@ -30,32 +30,34 @@
     <body>
         <!--# include file=".include/header.html" -->
         <div>
-            <h1 class="color-primary-0">Webkeys directory</h1>
+            <h1 class="color-primary-0">Antispam system</h1>
             <p>
-                A Web Key Directory (WKD) provides an easy way to provide and get the current public key for a given
-                email address through HTTPS. Thus it is infrastructure to improve the user experience for exchanging
-                secure emails and files.
-
-                Because the email address is needed to ask for a public key, using a Web Key Directory preserves the
-                privacy of this address. If a public key is found, it can be used to encrypt to the email address right
-                away.
+                Homebox comes with the excellent <a href="https://www.rspamd.com/" target="_blank">rspamd</a> antispam system.
             </p>
-
             <div class="section clear">
-                <h2 class="color-primary-1">Mozilla Thunderbird</h2>
+                <h2 class="color-primary-1">Throughput graph</h2>
                 <p>
-                    <img class="screenshot-mini-center" src="doc/img/webkeys-directory.png" alt="Thunderbird GPG key detection">
+                    <img class="screenshot-mini-center" src="doc/img/rspamd-graph.png" alt="Rspamd graph example">
                 </p>
                 <br class="clear">
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Microsoft Outlook</h2>
+                <h2 class="color-primary-1">Summary table</h2>
                 <p>
-                    <img class="screenshot-mini-center" src="doc/img/outlook-wkd-autoencrypt.gif" alt="Microsoft Outlook with WinGPG">
+                    <img class="screenshot-mini-center" src="doc/img/rspamd-summary-table.png" alt="Rspamd summary table">
                 </p>
                 <br class="clear">
             </div>
+
+            <div class="section clear">
+                <h2 class="color-primary-1">Summary graph</h2>
+                <p>
+                    <img class="screenshot-mini-center" src="doc/img/rspamd-summary-graph.png" alt="Rspamd summary graph">
+                </p>
+                <br class="clear">
+            </div>
+
         </div>
         <!--# include file=".include/footer.html" -->
     </body>

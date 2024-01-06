@@ -23,3 +23,17 @@ div.category:nth-child(2n+2) {
 div.category#other {
     display:none;
 }
+
+img.screenshot-mini {
+    max-width: 98%;
+    margin: 4pt auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img.screenshot-mini-center {
+    max-width: 98%;
+    margin: 4pt auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

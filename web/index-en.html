@@ -29,7 +29,7 @@
     </head>
     <body>
         <!--# include file=".include/header.html" -->
-        <div>
+        <div class="main-content clear">
             <p>Homebox is a free and open source self-hosting solution, based on Debian GNU/Linux. It let you manage
                 your personal information like your emails, your contacts, your calendars and even more, in a safest but
                 still simplest possible way.  It is particularly well suited for families and small communities.
@@ -98,8 +98,6 @@
                     <h3 class="color-secondary-1-0">Single authentication source</h3>
                     <p>Users are authenticated using the good and reliable OpenLDAP directory as a single source.
                         The initial passwords are automatically generated, and password policies and maximum age are enforced.
-                        Both users and the system credentials can be stored stored using the excellent
-                        <a target="_blank" href="https://passwordstore.org/">pass utility</a>.
                         Finally, users are able to easily change their password using the very simple web interface.
                     </p>
                 </div>
@@ -178,6 +176,7 @@
                         For missed spam emails, moving them into the junk folder automatically train the system.
                         Conversely, moving an email out of the Junk folder, mark the email as valid, aka <em>ham</em>.
                     </p>
+                    <p class="details">💡 <a href="mail-antispam-en.html" title="screenshot">More details here</a></p>
                 </div>
 
                 <div class="category" id="mail-antivirus">
@@ -288,8 +287,8 @@
                     </p>
                 </div>
             </div>
+            <div class="clear">&nbsp;</div>
         </div>
-        <br class="clear">
         <!--# include file=".include/footer.html" -->
     </body>
 </html>

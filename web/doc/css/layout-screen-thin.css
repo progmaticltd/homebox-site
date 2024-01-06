@@ -17,3 +17,18 @@ div.category {
 header ul#languages span.lang-name {
     display: none;
 }
+
+img.screenshot-mini {
+    max-width: 98%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img.screenshot-mini-center {
+    max-width: 98%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+}
