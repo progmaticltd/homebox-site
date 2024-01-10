@@ -34,18 +34,37 @@
                 Elle vous permet de gérer vos informations personnelles comme vos emails, vos contacts, vos calendriers
                 et bien plus encore, de la manière la plus sûre mais toujours la plus simple possible. Il est
                 particulièrement adapté aux familles et aux petites communautés.
+                C’est une solution plus optimisée pour <em>l’usage au quotidient</em> que pour le <em>développement</em>.
             </p>
 
-            <p>Ce projet est fait pour vous si :</p>
-            <ul>
-                <li>Vous souhaitez héberger vous-même vos e-mails et vos informations personnelles, pour des raisons de
-                    confidentialité, de sécurité, de liberté, de plaisir, etc.</li>
-                <li>Vous souhaitez que votre serveur soit sécurisé contre les intrusions physiques et à distance.</li>
-                <li>Vous souhaitez un système nécessitant peu de maintenance et se mettant à jour automatiquement.</li>
-                <li>Vous faites confiance à la communauté Debian pour publier des mises à jour de sécurité.</li>
-            </ul>
+            <div id="pros-and-cons" class="clear">
+                <div id="pros">
+                    <p><span class="emoji">✔️ </span>Ce projet est fait pour vous si :</p>
+                    <ul>
+                        <li>Vous souhaitez héberger vous-même vos e-mails et vos informations personnelles, pour des raisons de
+                          confidentialité, de sécurité, de liberté, de plaisir, etc.</li>
+                        <li>Vous souhaitez uniquement héberger des données personnelles, comme des e-mails, des contacts,
+                          des agendas et des fichiers personnels.</li>
+                        <li>Vous souhaitez que votre serveur soit sécurisé contre les intrusions physiques et à distance.</li>
+                        <li>Vous souhaitez un système nécessitant peu de maintenance et se mettant à jour automatiquement.</li>
+                        <li>Vous faites confiance à la communauté Debian pour publier des mises à jour de sécurité.</li>
+                    </ul>
+                </div>
 
-            <p>Il utilise un ensemble de scripts Ansible pour configurer l'ensemble de la plateforme à partir d'un
+                <div id="cons">
+                    <p><span class="emoji">❌ ️</span>Cependant, ce projet <em>n'est pas pour vous</em> si :</p>
+                    <ul>
+                        <li>Vous préférez déployer des logiciels directement à partir des sources plutôt que d'installer les packets d'une distribution.</li>
+                        <li>Vous souhaitez utiliser des « clouds Web » populaires écrits en PHP, comme <em>owncloud</em> ou <em>nextcloud</em>.</li>
+                        <li>Vous prévoyez de suivre les alertes de sécurité et d'appliquer les correctifs manuellement.</li>
+                        <li>Vous aimez corriger les incompatibilités entre les différents packages installés manuellement sur un serveur.</li>
+                        <li>Vous privilégiez le nombre de fonctionnalités plutôt que la fiabilité et la stabilité de votre serveur.</li>
+                        <li>La sécurité de votre plate-forme n'est pas votre principale préoccupation.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="clear">Il utilise un ensemble de scripts Ansible pour configurer l'ensemble de la plateforme à partir d'un
                 serveur Debian fraîchement installé.  Par conséquent, vous devez être familier avec Ansible et la ligne
                 de commande.  Le système peut être installé sur un serveur autonome à la maison, ou sur un serveur dédié
                 ou virtuel hébergé en ligne.

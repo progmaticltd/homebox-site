@@ -22,3 +22,15 @@ div.category:nth-child(3n+2) {
 div.category:nth-child(3n) {
     clear: right;
 }
+
+div#pros {
+    width: 48%;
+    margin-right: 1%;
+    float: left;
+}
+
+div#cons {
+    width: 48%;
+    margin-left: 1%;
+    float: left;
+}

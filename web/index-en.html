@@ -33,17 +33,36 @@
             <p>Homebox is a free and open source self-hosting solution, based on Debian GNU/Linux. It let you manage
                 your personal information like your emails, your contacts, your calendars and even more, in a safest but
                 still simplest possible way.  It is particularly well suited for families and small communities.
+                It is a solution optmised for <em>daily usage</em> rather than development.
             </p>
 
-            <p>This project is for you if:</p>
-            <ul>
-                <li>You are interested to host your emails and personal information yourself, for privacy, security, freedom, fun, etc.</li>
-                <li>You want your server to be secure against both physical and remote intrusion.</li>
-                <li>You want a low maintenance system, that keep itself updated automatically.</li>
-                <li>You trust the Debian community to publish security updates.</li>
-            </ul>
+            <div id="pros-and-cons" class="clear">
+                <div id="pros">
+                  <p><span class="emoji">✔️ </span>This project <em>is for you</em> if:</p>
+                  <ul>
+                    <li>You are interested to host your emails and personal information yourself, for privacy, security, freedom, fun, etc.</li>
+                    <li>You only want to host personal data, like emails, contacts, calendars and personal files.</li>
+                    <li>You want your server to be secure against both physical and remote intrusion.</li>
+                    <li>You want a low maintenance system, that keep itself updated automatically.</li>
+                    <li>You trust the Debian community to publish security updates.</li>
+                    <li>You enjoy taking days off away from your servers without worrying.</li>
+                  </ul>
+                </div>
 
-            <p>It is using a set of Ansible scripts to setup the whole platform from a freshly installed Debian server.
+                <div id="cons">
+                  <p><span class="emoji">❌ ️</span>However, this project is <em>not for you</em> if:</p>
+                  <ul>
+                    <li>You prefer deploying software directly from source rather than installing packages from a distribution.</li>
+                    <li>You want to use popular “web clouds” written in PHP, like <em>owncloud</em> or <em>nextcloud</em>.</li>
+                    <li>You are planning to follow security alerts and apply patches manually.</li>
+                    <li>You don’t mind fixing incompatibilities between different packages manually installed on a server.</li>
+                    <li>You favour the number of features over reliability and stability.</li>
+                    <li>The security of your platform is not your main concern.</li>
+                  </ul>
+                </div>
+            </div>
+
+            <p class="clear">It is using a set of Ansible scripts to setup the whole platform from a freshly installed Debian server.
                 Therefore, you need to be familiar with Ansible and the command line.
                 The system can be installed on a stand-alone server at home, or on a dedicated or virtual server hosted online.</p>
 
