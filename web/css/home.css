@@ -9,8 +9,6 @@ h1 {
 }
 
 footer {
-    background-color: black;
-    color: gray;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -33,8 +31,6 @@ footer p span.small {
 
 
 header div {
-    background-color: black;
-    color: white;
     text-align: right;
 }
 

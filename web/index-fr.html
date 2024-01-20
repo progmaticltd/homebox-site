@@ -1,31 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Homebox</title>
-        <!-- site global css -->
-        <link rel="stylesheet" media="screen" href="/css/global-screen-all.css">
-        <link rel="stylesheet" media="screen" href="/css/palette-screen.css">
-        <link rel="stylesheet" media="all" href="/css/style-all.css">
-        <link rel="stylesheet" media="all" href="/css/home.css">
-        <!-- specific stylesheets -->
-        <link rel="stylesheet" media="all" href="/css/features.css">
-        <!-- screen layouts -->
-        <link rel="stylesheet" media="screen" href="/doc/css/layout-screen-all.css">
-        <link rel="stylesheet" media="screen and (min-width:800px)" href="/doc/css/layout-screen-default.css">
-        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/doc/css/layout-screen-narrow.css">
-        <link rel="stylesheet" media="screen and (max-width:500px)" href="/doc/css/layout-screen-thin.css">
-        <!-- screen styles -->
-        <link rel="stylesheet" media="screen" href="/doc/css/style-screen-all.css">
-        <link rel="stylesheet" media="screen and (min-width:800px)" href="/css/style-screen-default.css">
-        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/css/style-screen-narrow.css">
-        <link rel="stylesheet" media="screen and (max-width:500px)" href="/css/style-screen-thin.css">
-        <!-- dark/light color schemes -->
-        <link rel="stylesheet" href="/css/color-schemes.css">
-        <!-- favicon and other details -->
-        <link rel="shortcut icon" type="image/jpg" href="/img/homebox.png">
         <script defer src="js/index-lang.js"></script>
+        <!--# include file=".include/html-headers.html" -->
     </head>
     <body>
         <!--# include file=".include/header.html" -->
@@ -42,9 +20,9 @@
                     <p><span class="emoji">✔️ </span>Ce projet est fait pour vous si :</p>
                     <ul>
                         <li>Vous souhaitez héberger vous-même vos e-mails et vos informations personnelles, pour des raisons de
-                          confidentialité, de sécurité, de liberté, de plaisir, etc.</li>
+                            confidentialité, de sécurité, de liberté, de plaisir, etc.</li>
                         <li>Vous souhaitez uniquement héberger des données personnelles, comme des e-mails, des contacts,
-                          des agendas et des fichiers personnels.</li>
+                            des agendas et des fichiers personnels.</li>
                         <li>Vous souhaitez que votre serveur soit sécurisé contre les intrusions physiques et à distance.</li>
                         <li>Vous souhaitez un système nécessitant peu de maintenance et se mettant à jour automatiquement.</li>
                         <li>Vous faites confiance à la communauté Debian pour publier des mises à jour de sécurité.</li>
@@ -263,7 +241,10 @@
                     <p>Surveillance facultative à l'aide de Prometheus et de tableaux de bord Grafana préconfigurés pour chaque service majeur.
                         Les alertes sont envoyées à la fois par courrier électronique à une adresse électronique externe et également via Jabber.
                     </p>
-                    <p class="details">💡 <a href="monitoring-fr.html" title="screenshot">More details here</a></p>
+                    <p class="details">💡 Plus de détails:
+			<a href="monitoring-fr.html" title="screenshot">Surveillance</a> /
+			<a href="alerting-fr.html" title="screenshot">Alertes</a>
+		    </p>
                 </div>
 
                 <div class="category" id="web-keys-directory">

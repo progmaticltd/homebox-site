@@ -1,6 +1,9 @@
 # Variables
 now := $(shell date +%F)
 
+# Get working directory
+work_dir := $(shell pwd)
+
 webdir := "web/"
 docdir := "web/doc"
 
@@ -13,5 +16,5 @@ publish: sitemap
 	rsync -ar --delete --chown=root:root web/ root@voodoo.homebox.space:/var/www/default
 
 preview: sitemap
-	pidof lighttpd || /usr/sbin/lighttpd -f ./lighttpd.conf -D >>logs/lighttpd.log 2>&1 &
-	sensible-browser http://127.0.0.1:8005/ >/dev/null 2>&1 &
+	docker build -t homebox-site .
+	docker run -d -v ${work_dir}/web/:/usr/share/nginx/html:ro -p 8005:80 homebox-site

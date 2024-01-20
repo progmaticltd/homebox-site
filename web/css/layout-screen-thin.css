@@ -1,18 +1,7 @@
-div.job {
+/* Layout for screens below 500 pixels (e.g. phone in portrait) */
+body {
+    padding: 5pt;
 }
-
-div.task {
-}
-
-div.generic {
-}
-
-aside {
-}
-
-div.category {
-}
-
 
 header ul#languages span.lang-name {
     display: none;

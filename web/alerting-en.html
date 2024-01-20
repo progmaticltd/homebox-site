@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Homebox - Antispam</title>
+        <title>Homebox - Alerting</title>
 	<!--# include file=".include/html-headers.html" -->
         <!-- specific stylesheets -->
         <link rel="stylesheet" media="all" href="/css/features.css">
@@ -11,30 +11,31 @@
     <body>
         <!--# include file=".include/header.html" -->
         <div>
-            <h1 class="color-primary-0">Système antispam</h1>
+            <h1 class="color-primary-0">Alerting</h1>
             <p>
-                Homebox utilise l’excellent <a href="https://www.rspamd.com/" target="_blank">rspamd</a> pour filtrer les spams.
+                Monitoring and alerting is done using the standard Grafana and Prometheus software.
+                Alerts are sent both using Jabber and Emails, to an internal or an external email address.
             </p>
             <div class="section clear">
-                <h2 class="color-primary-1">Graphique de débit</h2>
+                <h2 class="color-primary-1">Email alert raising</h2>
                 <p>
-                    <img class="screenshot-mini-center" src="doc/img/rspamd-graph.png" alt="Rspamd graph example">
+                    <img class="screenshot-mini-center" src="doc/img/email-alert-raised.png" alt="Email alert raised">
                 </p>
                 <br class="clear">
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Summary table</h2>
+                <h2 class="color-primary-1">Email alert resolved</h2>
                 <p>
-                    <img class="screenshot-mini-center" src="doc/img/rspamd-summary-table.png" alt="Rspamd summary table">
+                    <img class="screenshot-mini-center" src="doc/img/email-alert-solved.png" alt="Email alert solved">
                 </p>
                 <br class="clear">
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Summary graph</h2>
+                <h2 class="color-primary-1">Thread of email alerts</h2>
                 <p>
-                    <img class="screenshot-mini-center" src="doc/img/rspamd-summary-graph.png" alt="Rspamd summary graph">
+                    <img class="screenshot-mini-center" src="doc/img/email-alert-thread.png" alt="Email alert thread">
                 </p>
                 <br class="clear">
             </div>

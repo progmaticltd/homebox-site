@@ -1,31 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Homebox</title>
-        <!-- site global css -->
-        <link rel="stylesheet" media="screen" href="/css/global-screen-all.css">
-        <link rel="stylesheet" media="screen" href="/css/palette-screen.css">
-        <link rel="stylesheet" media="all" href="/css/style-all.css">
-        <link rel="stylesheet" media="all" href="/css/home.css">
-        <!-- specific stylesheets -->
-        <link rel="stylesheet" media="all" href="/css/features.css">
-        <!-- screen layouts -->
-        <link rel="stylesheet" media="screen" href="/doc/css/layout-screen-all.css">
-        <link rel="stylesheet" media="screen and (min-width:800px)" href="/doc/css/layout-screen-default.css">
-        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/doc/css/layout-screen-narrow.css">
-        <link rel="stylesheet" media="screen and (max-width:500px)" href="/doc/css/layout-screen-thin.css">
-        <!-- screen styles -->
-        <link rel="stylesheet" media="screen" href="/doc/css/style-screen-all.css">
-        <link rel="stylesheet" media="screen and (min-width:800px)" href="/css/style-screen-default.css">
-        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/css/style-screen-narrow.css">
-        <link rel="stylesheet" media="screen and (max-width:500px)" href="/css/style-screen-thin.css">
-        <!-- dark/light color schemes -->
-        <link rel="stylesheet" href="/css/color-schemes.css">
-        <!-- favicon and other details -->
-        <link rel="shortcut icon" type="image/jpg" href="/img/homebox.png">
-        <script defer src="js/index-lang.js"></script>
+	<!--# include file=".include/html-headers.html" -->
     </head>
     <body>
         <!--# include file=".include/header.html" -->
@@ -38,27 +15,27 @@
 
             <div id="pros-and-cons" class="clear">
                 <div id="pros">
-                  <p><span class="emoji">✔️ </span>This project <em>is for you</em> if:</p>
-                  <ul>
-                    <li>You are interested to host your emails and personal information yourself, for privacy, security, freedom, fun, etc.</li>
-                    <li>You only want to host personal data, like emails, contacts, calendars and personal files.</li>
-                    <li>You want your server to be secure against both physical and remote intrusion.</li>
-                    <li>You want a low maintenance system, that keep itself updated automatically.</li>
-                    <li>You trust the Debian community to publish security updates.</li>
-                    <li>You enjoy taking days off away from your servers without worrying.</li>
-                  </ul>
+                    <p><span class="emoji">✔️ </span>This project <em>is for you</em> if:</p>
+                    <ul>
+                        <li>You are interested to host your emails and personal information yourself, for privacy, security, freedom, fun, etc.</li>
+                        <li>You only want to host personal data, like emails, contacts, calendars and personal files.</li>
+                        <li>You want your server to be secure against both physical and remote intrusion.</li>
+                        <li>You want a low maintenance system, that keep itself updated automatically.</li>
+                        <li>You trust the Debian community to publish security updates.</li>
+                        <li>You enjoy taking days off away from your servers without worrying.</li>
+                    </ul>
                 </div>
 
                 <div id="cons">
-                  <p><span class="emoji">❌ ️</span>However, this project is <em>not for you</em> if:</p>
-                  <ul>
-                    <li>You prefer deploying software directly from source rather than installing packages from a distribution.</li>
-                    <li>You want to use popular “web clouds” written in PHP, like <em>owncloud</em> or <em>nextcloud</em>.</li>
-                    <li>You are planning to follow security alerts and apply patches manually.</li>
-                    <li>You don’t mind fixing incompatibilities between different packages manually installed on a server.</li>
-                    <li>You favour the number of features over reliability and stability.</li>
-                    <li>The security of your platform is not your main concern.</li>
-                  </ul>
+                    <p><span class="emoji">❌ ️</span>However, this project is <em>not for you</em> if:</p>
+                    <ul>
+                        <li>You prefer deploying software directly from source rather than installing packages from a distribution.</li>
+                        <li>You want to use popular “web clouds” written in PHP, like <em>owncloud</em> or <em>nextcloud</em>.</li>
+                        <li>You are planning to follow security alerts and apply patches manually.</li>
+                        <li>You don’t mind fixing incompatibilities between different packages manually installed on a server.</li>
+                        <li>You favour the number of features over reliability and stability.</li>
+                        <li>The security of your platform is not your main concern.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -145,7 +122,7 @@
 
                 <div class="category" id="auto-updates">
                     <h3 class="color-secondary-1-0">Automatic updates</h3>
-                    <p>Both standard and security updates are automatically instaled using the Debian
+                    <p>Both standard and security updates are automatically installed using the Debian
                         <a href="https://wiki.debian.org/UnattendedUpgrades">unattended-upgrades</a> package.
                         The services are automatically restarted when required, minimising the maintenance, and increasing security.
                         The system can be also configured to reboot automatically when the kernel has been upgraded.
@@ -178,7 +155,7 @@
                 </div>
 
                 <div class="category" id="mail-autoconfig">
-                    <h3 class="color-secondary-1-0">Automatic email settings detection</h3>
+                    <h3 class="color-secondary-1-0">Email settings detection</h3>
                     <p>Special DNS records and web settings are generated, allowing any modern email client to detect settings.
                         Works with desktop clients, like Thunderbird, Evolution, Outlook, etc. and mobile clients
                         like <a target="_blank" href="https://k9mail.app/">K-9 Mail</a> or
@@ -255,7 +232,10 @@
                     <p>Optional monitoring using Prometheus and pre-configured Grafana dashboards for each major service.
                         Alerts are sent both using email to an external email address and using Jabber as well.
                     </p>
-                    <p class="details">💡 <a href="monitoring-en.html" title="screenshot">More details here</a></p>
+                    <p class="details">💡 More details here:
+			<a href="monitoring-en.html" title="screenshot">Monitoring</a> /
+			<a href="alerting-en.html" title="screenshot">Alerting</a>
+		    </p>
                 </div>
 
                 <div class="category" id="web-keys-directory">

@@ -3,58 +3,47 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Homebox</title>
-        <!-- site global css -->
-        <link rel="stylesheet" media="screen" href="/css/global-screen-all.css">
-        <link rel="stylesheet" media="screen" href="/css/palette-screen.css">
-        <link rel="stylesheet" media="all" href="/css/style-all.css">
-        <link rel="stylesheet" media="all" href="/css/home.css">
+        <title>Homebox - Monitoring</title>
+	<!--# include file=".include/html-headers.html" -->
         <!-- specific stylesheets -->
         <link rel="stylesheet" media="all" href="/css/features.css">
-        <!-- screen layouts -->
-        <link rel="stylesheet" media="screen" href="/doc/css/layout-screen-all.css">
-        <link rel="stylesheet" media="screen and (min-width:800px)" href="/doc/css/layout-screen-default.css">
-        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/doc/css/layout-screen-narrow.css">
-        <link rel="stylesheet" media="screen and (max-width:500px)" href="/doc/css/layout-screen-thin.css">
-        <!-- screen styles -->
-        <link rel="stylesheet" media="screen" href="/doc/css/style-screen-all.css">
-        <link rel="stylesheet" media="screen and (min-width:800px)" href="/css/style-screen-default.css">
-        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/css/style-screen-narrow.css">
-        <link rel="stylesheet" media="screen and (max-width:500px)" href="/css/style-screen-thin.css">
-        <!-- dark/light color schemes -->
-        <link rel="stylesheet" href="/css/color-schemes.css">
-        <!-- favicon and other details -->
-        <link rel="shortcut icon" type="image/jpg" href="/img/homebox.png">
-        <script defer src="js/index-lang.js"></script>
     </head>
     <body>
         <!--# include file=".include/header.html" -->
         <div>
             <h1 class="color-primary-0">Monitoring</h1>
             <p>
-                Monitoring and alerting is done using the standard Grafana and Prometheus software.
-                Alerts are sent both using Jabber and Emails, to an internal or an external email address.
+                Monitoring is done using the standard Grafana software.
             </p>
+
             <div class="section clear">
-                <h2 class="color-primary-1">Email alert raising</h2>
+                <h2 class="color-primary-1">System load</h2>
                 <p>
-                    <img class="screenshot-mini-center" src="doc/img/email-alert-raised.png" alt="Email alert raised">
+                    <img class="screenshot-mini-center" src="doc/img/grafana-system-load.png" alt="System load">
                 </p>
                 <br class="clear">
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Email alert resolved</h2>
+                <h2 class="color-primary-1">Nginx</h2>
                 <p>
-                    <img class="screenshot-mini-center" src="doc/img/email-alert-solved.png" alt="Email alert solved">
+                    <img class="screenshot-mini-center" src="doc/img/grafana-nginx.png" alt="Grafana nginx">
                 </p>
                 <br class="clear">
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Thread of email alerts</h2>
+                <h2 class="color-primary-1">Postfix</h2>
                 <p>
-                    <img class="screenshot-mini-center" src="doc/img/email-alert-thread.png" alt="Email alert thread">
+                    <img class="screenshot-mini-center" src="doc/img/grafana-postfix.png" alt="Postfix monitoring">
+                </p>
+                <br class="clear">
+            </div>
+
+            <div class="section clear">
+                <h2 class="color-primary-1">PowerDNS</h2>
+                <p>
+                    <img class="screenshot-mini-center" src="doc/img/grafana-powerdns.png" alt="PowerDNS monitoring">
                 </p>
                 <br class="clear">
             </div>
