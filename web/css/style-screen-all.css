@@ -1,9 +1,23 @@
+/* default root styles */
 
-header div span a {
-    text-decoration: none;
+/* Default fonts */
+body {
+    font-family: "Garamond", serif;
 }
 
-header div span a.active {
-    text-decoration: underline;
-    font-weight: bold;
+/* links */
+a {
+    opacity: 0.8;
+    color: inherit;
+}
+a:hover {
+    opacity: 1;
+    border: none;
+}
+a.no-decoration {
+    border: none;
+}
+
+header div {
+    border-bottom: 1px solid;
 }

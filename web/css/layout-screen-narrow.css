@@ -1,6 +1,6 @@
 /* Layout for screens between 500 and 800 pixels (e.g. phone in landcape) */
 body {
-    padding: 10pt;
+    padding: 0pt 10pt 10pt 10pt;
 }
 
 div.category {

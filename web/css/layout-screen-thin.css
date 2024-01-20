@@ -1,6 +1,6 @@
 /* Layout for screens below 500 pixels (e.g. phone in portrait) */
 body {
-    padding: 5pt;
+    padding: 0pt 5pt 0pt 5pt;
 }
 
 header ul#languages span.lang-name {

@@ -1,4 +1,24 @@
 /* Styles specific for the home page */
 h1 {
     text-align: center;
+    font-variant: small-caps;
+    font-size: 24pt;
+    letter-spacing: 1pt;
+}
+
+h1 span {
+    font-size: x-small;
+    display: block;
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 1pt;
+    padding-top: 2em;
+    border-bottom: 2pt solid;
+}
+
+h3 {
+    border-bottom: 1pt solid;
 }

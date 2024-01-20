@@ -4,7 +4,7 @@ body {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 15pt;
+    padding: 0pt 15pt 10pt 15pt;
 }
 
 div.task {

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Homebox</title>
 	<!--# include file=".include/html-headers.html" -->
+	<title>Homebox — self-hosting</title>
 	<link rel="stylesheet" media="screen" href="/css/page-home.css">
     </head>
     <body>
         <!--# include file=".include/header.html" -->
+        <h1 class="fg-color-1">HomeBox
+	    <span>Self-hosting for the perfectionnists.</span>
+	</h1>
         <div class="main-content clear">
             <p>Homebox is a free and open source self-hosting solution, based on Debian GNU/Linux. It let you manage
                 your personal information like your emails, your contacts, your calendars and even more, in a safest but
@@ -54,10 +57,10 @@
             </ul>
 
             <div class="section clear">
-                <h2 class="color-primary-1">System features</h2>
+                <h2 class="fg-color-2">System features</h2>
 
                 <div class="category" id="debian-run">
-                    <h3 class="color-secondary-1-0">Runs on Debian</h3>
+                    <h3 class="fg-color-3">Runs on Debian</h3>
                     <p>Run on a standard Debian system without any third party packages or binary files and without modifying system files.
                         All the core features only requires packages from Debian Bookworm, without even using non-free or contrib sections.
                         Only one optional feature could be installed using a third party repository, but <em>still</em> receives security updates.
@@ -65,7 +68,7 @@
                 </div>
 
                 <div class="category" id="tls-encryption">
-                    <h3 class="color-secondary-1-0">Strong TLS encryption</h3>
+                    <h3 class="fg-color-3">Strong TLS encryption</h3>
                     <p>All the certificates are automatically generated using LetsEncrypt and the safer DNS challenge.
                         The sites automatically benefits the grade A+, with
                         <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>
@@ -74,7 +77,7 @@
                 </div>
 
                 <div class="category" id="modern-dns">
-                    <h3 class="color-secondary-1-0">Modern DNS server</h3>
+                    <h3 class="fg-color-3">Modern DNS server</h3>
                     <p>A DNS server is implemented with state of the art features.
                         Thanks to <a target="_blank" href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>,
                         each record is signed using a public key infrastructure.
@@ -84,7 +87,7 @@
                 </div>
 
                 <div class="category" id="ssh-fingerprint">
-                    <h3 class="color-secondary-1-0">SSH fingerprint records</h3>
+                    <h3 class="fg-color-3">SSH fingerprint records</h3>
                     <p>To prevent man in the middle when using SSH connections, the public keys are published on the DNS server, using
                         <a target="_blank" href="https://en.wikipedia.org/wiki/SSHFP_record">SSHFP records</a> aka SSH fingerprints.
                         This also allows you to establish SSH connections without having to manage known_hosts file.
@@ -92,7 +95,7 @@
                 </div>
 
                 <div class="category" id="authentication-mgmt">
-                    <h3 class="color-secondary-1-0">Single authentication source</h3>
+                    <h3 class="fg-color-3">Single authentication source</h3>
                     <p>Users are authenticated using the good and reliable OpenLDAP directory as a single source.
                         The initial passwords are automatically generated, and password policies and maximum age are enforced.
                         Finally, users are able to easily change their password using the very simple web interface.
@@ -100,7 +103,7 @@
                 </div>
 
                 <div class="category" id="integrated-backup">
-                    <h3 class="color-secondary-1-0">Integrated backup</h3>
+                    <h3 class="fg-color-3">Integrated backup</h3>
                     <p>The system comes with <a target="_blank" href="https://www.borgbackup.org">borg backup</a>,
                         configuration to backup emails, as well as calendars and contacts for all the users.
                         Multiple backup destinations can be specified, with multiple frequencies as well.
@@ -111,10 +114,10 @@
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Security features</h2>
+                <h2 class="fg-color-2">Security features</h2>
 
                 <div class="category" id="app-armor">
-                    <h3 class="color-secondary-1-0">AppArmor enforcing</h3>
+                    <h3 class="fg-color-3">AppArmor enforcing</h3>
                     <p>All services running under dedicated <a target="_blank" href="https://www.apparmor.net/">AppArmor</a> enforced profiles.
                         This proactively protects the operating system and applications from external or internal threats, even zero-day attacks.
                         It is enforcing good behaviour and preventing both known and unknown application flaws from being exploited.
@@ -122,7 +125,7 @@
                 </div>
 
                 <div class="category" id="auto-updates">
-                    <h3 class="color-secondary-1-0">Automatic updates</h3>
+                    <h3 class="fg-color-3">Automatic updates</h3>
                     <p>Both standard and security updates are automatically installed using the Debian
                         <a href="https://wiki.debian.org/UnattendedUpgrades">unattended-upgrades</a> package.
                         The services are automatically restarted when required, minimising the maintenance, and increasing security.
@@ -132,7 +135,7 @@
                 </div>
 
                 <div class="category" id="firewall">
-                    <h3 class="color-secondary-1-0">Strong Firewall</h3>
+                    <h3 class="fg-color-3">Strong Firewall</h3>
                     <p>Both inbound and outbound connections are filtered using the modern nftables.
                         For inbound connections, only the public services are authorised.
                         For outbound connections, only the necessary traffic is allowed,
@@ -144,10 +147,10 @@
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Communication and personal information management</h2>
+                <h2 class="fg-color-2">Communication and personal information management</h2>
 
                 <div class="category" id="webmail">
-                    <h3 class="color-secondary-1-0">Responsive web interface</h3>
+                    <h3 class="fg-color-3">Responsive web interface</h3>
                     <p>You can access your emails, calendars and contacts using a modern web browser, from a desktop or a mobile client,
                         thanks to the nice and responsive web interface implemented by <a target="_blank" href="https://sogo.nu/">SOGo</a>.
                         For additional security, an optional second factor authentication can be added, using the TOTP standard.
@@ -156,7 +159,7 @@
                 </div>
 
                 <div class="category" id="mail-autoconfig">
-                    <h3 class="color-secondary-1-0">Email settings detection</h3>
+                    <h3 class="fg-color-3">Email settings detection</h3>
                     <p>Special DNS records and web settings are generated, allowing any modern email client to detect settings.
                         Works with desktop clients, like Thunderbird, Evolution, Outlook, etc. and mobile clients
                         like <a target="_blank" href="https://k9mail.app/">K-9 Mail</a> or
@@ -166,7 +169,7 @@
                 </div>
 
                 <div class="category" id="mail-antispam">
-                    <h3 class="color-secondary-1-0">Modern antispam</h3>
+                    <h3 class="fg-color-3">Modern antispam</h3>
                     <p>The anstispam chosen is <a href="https://www.rspamd.com/" target="_blank">rspamd</a>,
                         which is both powerful and extremely simple to use.
                         Emails recognised as Junk are automatically placed into the Junk folder upon reception.
@@ -177,7 +180,7 @@
                 </div>
 
                 <div class="category" id="mail-antivirus">
-                    <h3 class="color-secondary-1-0">Optional antivirus</h3>
+                    <h3 class="fg-color-3">Optional antivirus</h3>
                     <p>You can use the excellent Clam-AV antivirus to verify entering emails,
                         as well as the ones sent by the users. Emails entering with viruses can be silently dropped or rejected,
                         while outgoing emails with viruses are bounced.
@@ -185,7 +188,7 @@
                 </div>
 
                 <div class="category" id="mail-advanced">
-                    <h3 class="color-secondary-1-0">Advanced mail features</h3>
+                    <h3 class="fg-color-3">Advanced mail features</h3>
                     <p>The server comes with advanced features, some of them included by default, some of them optional for specific users.
                         For instance, by default, quotas, server side filters, virtual folders, privacy controls or automatic copy
                         to the sent folder, are included.
@@ -195,7 +198,7 @@
                 </div>
 
                 <div class="category" id="jabber">
-                    <h3 class="color-secondary-1-0">Jabber server</h3>
+                    <h3 class="fg-color-3">Jabber server</h3>
                     <p>You can also install a Jabber server, which allows you to send messages to anyone using Jabber,
                         on the same server or on other domains. The server supports audio and video calls from mobile phones.
                         Messages can be encrypted using omemo or GPG as well, if your client supports it.
@@ -205,31 +208,31 @@
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Other features</h2>
+                <h2 class="fg-color-2">Other features</h2>
 
                 <div class="category" id="webdav">
-                    <h3 class="color-secondary-1-0">Personal file storage</h3>
+                    <h3 class="fg-color-3">Personal file storage</h3>
                     <p>The users are allowed to store and backup their personal files, from a computer or from a phone.
                         The protocol used is WebDAV, and the authentication relies on the standard LDAP server.
                     </p>
                 </div>
 
                 <div class="category" id="flexible-ip-support">
-                    <h3 class="color-secondary-1-0">Flexible IP address support</h3>
+                    <h3 class="fg-color-3">Flexible IP address support</h3>
                     <p>Fully support IPv4 alone, IPv6 alone, or even a mix of both.
                         The system creates and maintains all the DNS records automatically.
                     </p>
                 </div>
 
                 <div class="category" id="default-site">
-                    <h3 class="color-secondary-1-0">Default site</h3>
+                    <h3 class="fg-color-3">Default site</h3>
                     <p>Generate a default site skeleton for your domain.
                         This let you focus on your site content without having to handle certificates management nor nginx configuration.
                     </p>
                 </div>
 
                 <div class="category" id="monitoring">
-                    <h3 class="color-secondary-1-0">Monitoring and alerting</h3>
+                    <h3 class="fg-color-3">Monitoring and alerting</h3>
                     <p>Optional monitoring using Prometheus and pre-configured Grafana dashboards for each major service.
                         Alerts are sent both using email to an external email address and using Jabber as well.
                     </p>
@@ -240,7 +243,7 @@
                 </div>
 
                 <div class="category" id="web-keys-directory">
-                    <h3 class="color-secondary-1-0">GPG Web keys directory</h3>
+                    <h3 class="fg-color-3">GPG Web keys directory</h3>
                     <p>If you are using GPG, <em>Homebox</em> can automatically publish your public key using a
                         <a href="https://wiki.gnupg.org/WKD" target="_blank">web key directory</a>.
                         Your contacts will be able to find and import your public key automatically,
@@ -250,7 +253,7 @@
                 </div>
 
                 <div class="category" id="dual-storage">
-                    <h3 class="color-secondary-1-0">Dual storage support</h3>
+                    <h3 class="fg-color-3">Dual storage support</h3>
                     <p>The solution supports two different locations.
                         The first one is dedicated to day-to-day emails, calendars and contacts, perhaps a fast storage like an SSD drive.
                         The second one is dedicated to email archives, and the files shared via webdav or Jabber.
@@ -261,10 +264,10 @@
             </div>
 
             <div class="section clear">
-                <h2 class="color-primary-1">Development features</h2>
+                <h2 class="fg-color-2">Development features</h2>
 
                 <div class="category" id="granular-role">
-                    <h3 class="color-secondary-1-0">Features installation and uninstallation</h3>
+                    <h3 class="fg-color-3">Install and uninstall features</h3>
                     <p>Most feature can be independantly installed and uninstalled, without breaking the system.
                         For instance, the antivirus can be installed for testing, and then uninstalled.
                         Each feature is installed using a specific Ansible role. Once a feature is installed,
@@ -273,7 +276,7 @@
                 </div>
 
                 <div class="category" id="dev-friendly">
-                    <h3 class="color-secondary-1-0">Developer friendly</h3>
+                    <h3 class="fg-color-3">Developer friendly</h3>
                     <p>One dedicated role to deploy useful tools for diagnostic and development purposes.
                         Once the development done,the tools can be uninstalled as well.
                         Each role supports <em>development</em> and <em>debug</em> flags,
@@ -282,7 +285,7 @@
                 </div>
 
                 <div class="category" id="linting">
-                    <h3 class="color-secondary-1-0">Code quality</h3>
+                    <h3 class="fg-color-3">Code quality</h3>
                     <p>To ensure the code quality, each role is checked through ansible-lint before each push, using git-hooks.
                         Any shell deployed on the server is checked using <em>shellcheck</em> as well, to ensure no errors is contained.
                     </p>

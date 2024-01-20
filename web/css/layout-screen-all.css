@@ -1,14 +1,8 @@
 /* Layout for screen common to all sizes */
 
-.clear {
-    clear:both;
-    display: block;
-}
-
+/* Header styles */
 header div {
-    height: 2em;
-    letter-spacing: 2px;
-    vertical-align: middle;
+    text-align: right;
 }
 
 header ul#languages ul {
@@ -27,10 +21,6 @@ header ul#languages span {
     display: inline;
 }
 
-header div {
-    text-align: right;
-}
-
 header div span a {
     text-decoration: none;
 }
@@ -41,6 +31,8 @@ header a.active {
     opacity: 1;
 }
 
+/* Footer styles */
+
 footer {
     position: fixed;
     left: 0;
@@ -50,7 +42,6 @@ footer {
     font-size: 65%;
     height: 2em;
     text-align: center;
-    letter-spacing: 2px;
 }
 
 footer p {
@@ -66,4 +57,9 @@ footer p span.small {
 /* Needed to avoid the content being hidden by the footer */
 div.main-content {
     padding-bottom: 2em;
+}
+
+.clear {
+    clear:both;
+    display: block;
 }
