@@ -5,23 +5,10 @@
     display: block;
 }
 
-div.section {
-    margin:2em;
-}
-
 header div {
     height: 2em;
     letter-spacing: 2px;
     vertical-align: middle;
-}
-
-header div span a {
-    text-decoration: none;
-}
-
-header div span a.active {
-    text-decoration: underline;
-    font-weight: bold;
 }
 
 header ul#languages ul {
@@ -38,4 +25,45 @@ header ul#languages li {
 header ul#languages span {
     margin: 0 auto;
     display: inline;
+}
+
+header div {
+    text-align: right;
+}
+
+header div span a {
+    text-decoration: none;
+}
+
+header a.active {
+    text-decoration: underline;
+    font-weight: bold;
+    opacity: 1;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: .5em .1em;
+    font-size: 65%;
+    height: 2em;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin: 0 1em;
+    padding: 0;
+}
+
+footer p span.small {
+    margin: 0 .5em;
+}
+
+
+/* Needed to avoid the content being hidden by the footer */
+div.main-content {
+    padding-bottom: 2em;
 }
