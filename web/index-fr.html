@@ -12,23 +12,25 @@
             <p>Auto-hébergement pour les perfectionnistes</p>
         </hgroup>
         <div class="main-content clear">
-            <p>Homebox est une solution libre et open-source d'auto-hébergement, basée sur Debian GNU/Linux.
-                Elle vous permet de gérer vos informations personnelles comme vos emails, vos contacts, vos calendriers
-                et bien plus encore, de la manière la plus sûre mais toujours la plus simple possible. Il est
-                particulièrement adapté aux familles et aux petites communautés.
-                C’est une solution plus optimisée pour <em>l’usage au quotidient</em> que pour le <em>développement</em>.
+            <p>Homebox est une solution libre et open-source d'auto-hébergement, basée sur Debian GNU/Linux.  Elle vous
+                permet de gérer vos informations personnelles comme vos emails, vos contacts, vos calendriers et bien
+                plus encore, de la manière la plus sûre mais toujours la plus simple possible. Il est particulièrement
+                adapté aux familles et aux petites communautés.  C’est une solution plus optimisée pour <em>l’usage au
+                quotidient</em> que pour le <em>développement</em>.
             </p>
 
             <div id="pros-and-cons" class="clear">
                 <div id="pros">
                     <p><span class="emoji">✔️ </span>Ce projet est fait pour vous si :</p>
                     <ul>
-                        <li>Vous souhaitez héberger vous-même vos e-mails et vos informations personnelles, pour des raisons de
-                            confidentialité, de sécurité, de liberté, de plaisir, etc.</li>
-                        <li>Vous souhaitez uniquement héberger des données personnelles, comme des e-mails, des contacts,
-                            des agendas et des fichiers personnels.</li>
-                        <li>Vous souhaitez que votre serveur soit sécurisé contre les intrusions physiques et à distance.</li>
-                        <li>Vous souhaitez un système nécessitant peu de maintenance et se mettant à jour automatiquement.</li>
+                        <li>Vous souhaitez héberger vous-même vos e-mails et vos informations personnelles, pour des
+                            raisons de confidentialité, de sécurité, de liberté, de plaisir, etc.</li>
+                        <li>Vous souhaitez uniquement héberger des données personnelles, comme des e-mails, des
+                            contacts, des agendas et des fichiers personnels.</li>
+                        <li>Vous souhaitez que votre serveur soit sécurisé contre les intrusions physiques et à
+                            distance.</li>
+                        <li>Vous souhaitez un système nécessitant peu de maintenance et se mettant à jour
+                            automatiquement.</li>
                         <li>Vous faites confiance à la communauté Debian pour publier des mises à jour de sécurité.</li>
                     </ul>
                 </div>
@@ -36,27 +38,34 @@
                 <div id="cons">
                     <p><span class="emoji">❌ ️</span>Cependant, ce projet <em>n'est pas pour vous</em> si :</p>
                     <ul>
-                        <li>Vous préférez déployer des logiciels directement à partir des sources plutôt que d'installer les packets d'une distribution.</li>
-                        <li>Vous souhaitez utiliser des « clouds Web » populaires écrits en PHP, comme <em>owncloud</em> ou <em>nextcloud</em>.</li>
-                        <li>Vous prévoyez de suivre les alertes de sécurité et d'appliquer les correctifs manuellement.</li>
-                        <li>Vous aimez corriger les incompatibilités entre les différents packages installés manuellement sur un serveur.</li>
-                        <li>Vous privilégiez le nombre de fonctionnalités plutôt que la fiabilité et la stabilité de votre serveur.</li>
+                        <li>Vous préférez déployer des logiciels directement à partir des sources plutôt que d'installer
+                            les packets d'une distribution.</li>
+                        <li>Vous souhaitez utiliser des « clouds Web » populaires écrits en PHP, comme <em>owncloud</em>
+                            ou <em>nextcloud</em>.</li>
+                        <li>Vous prévoyez de suivre les alertes de sécurité et d'appliquer les correctifs
+                            manuellement.</li>
+                        <li>Vous aimez corriger les incompatibilités entre les différents packages installés
+                            manuellement sur un serveur.</li>
+                        <li>Vous privilégiez le nombre de fonctionnalités plutôt que la fiabilité et la stabilité de
+                            votre serveur.</li>
                         <li>La sécurité de votre plate-forme n'est pas votre principale préoccupation.</li>
                     </ul>
                 </div>
             </div>
 
-            <p class="clear">Il utilise un ensemble de scripts Ansible pour configurer l'ensemble de la plateforme à partir d'un
-                serveur Debian fraîchement installé.  Par conséquent, vous devez être familier avec Ansible et la ligne
-                de commande.  Le système peut être installé sur un serveur autonome à la maison, ou sur un serveur dédié
-                ou virtuel hébergé en ligne.
+            <p class="clear">Il utilise un ensemble de scripts Ansible pour configurer l'ensemble de la plateforme à
+                partir d'un serveur Debian fraîchement installé.  Par conséquent, vous devez être familier avec Ansible
+                et la ligne de commande.  Le système peut être installé sur un serveur autonome à la maison, ou sur un
+                serveur dédié ou virtuel hébergé en ligne.
             </p>
 
             <p>Le code source de toute la distribution est publié sur GitHub</p>
             <ul>
                 <li><a href="https://github.com/progmaticltd/homebox">Dépôt principal</a></li>
-                <li><a href="https://github.com/progmaticltd/homebox-cloud-modules">Roles spécifiques aux serveurs Cloud / VPS</a>, pour être utilisés <em>avant</em> l’installation.</li>
-                <li><a href="https://github.com/progmaticltd/homebox-extra-modules">Roles additionels</a>, contenant des fonctionnalités non primordiales.</li>
+                <li><a href="https://github.com/progmaticltd/homebox-cloud-modules">Roles spécifiques aux serveurs Cloud
+                        / VPS</a>, pour être utilisés <em>avant</em> l’installation.</li>
+                <li><a href="https://github.com/progmaticltd/homebox-extra-modules">Roles additionels</a>, contenant des
+                    fonctionnalités non primordiales.</li>
                 <li><a href="https://github.com/progmaticltd/homebox-site">Ce site de documentation</a>.</li>
             </ul>
 
@@ -75,8 +84,8 @@
 
                 <div class="category" id="tls-encryption">
                     <h3 class="fg-color-3">Chiffrage TLS fort</h3>
-                    <p>Tous les certificats sont générés automatiquement à l'aide de LetsEncrypt avec la méthode DNS, plus sûre.
-                        Les sites bénéficient automatiquement du grade A+, avec
+                    <p>Tous les certificats sont générés automatiquement à l'aide de LetsEncrypt avec la méthode DNS,
+                        plus sûre. Les sites bénéficient automatiquement du grade A+, avec
                         <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>
                         mis en œuvre pour empêcher l’interception du trafic.
                     </p>
@@ -84,38 +93,42 @@
 
                 <div class="category" id="modern-dns">
                     <h3 class="fg-color-3">Serveur DNS moderne</h3>
-                    <p>Un serveur DNS est implémenté avec des fonctionnalités de pointe.
-                        Grâce à <a target="_blank" href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>,
-                        chaque enregistrement est signé à l'aide d'une infrastructure à clé publique.
-                        <a target="_blank" href="https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization">Enregistrements CAA</a>,
-                        pour certifier l'origine de vos certificats, empêchant toute autre organisation que LetsEncrypt de créer des certificats
-                        avec votre nom de domaine.
+                    <p>Un serveur DNS est implémenté avec des fonctionnalités de pointe.  Grâce à <a target="_blank"
+                                                                                                     href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>, chaque
+                        enregistrement est signé à l'aide d'une infrastructure à clé publique.
+                        <a target="_blank"
+                           href="https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization">Enregistrements
+                            CAA</a>, pour certifier l'origine de vos certificats, empêchant toute autre organisation que
+                        LetsEncrypt de créer des certificats avec votre nom de domaine.
                     </p>
                 </div>
 
                 <div class="category" id="ssh-fingerprint">
                     <h3 class="fg-color-3">Empreintes « digitales » SSH</h3>
-                    <p>Pour éviter toute intervention intermédiaire lors de l'utilisation de connexions SSH, les clés publiques sont publiées sur le serveur DNS,
-                        en utilisant <a target="_blank" href="https://en.wikipedia.org/wiki/SSHFP_record">Enregistrements SSHFP</a>,
-                        autrement dit empreintes digitales SSH. Cela vous permet également d'établir des connexions SSH sans avoir à gérer le fichier known_hosts.
+                    <p>Pour éviter toute intervention intermédiaire lors de l'utilisation de connexions SSH, les clés
+                        publiques sont publiées sur le serveur DNS, en utilisant <a target="_blank"
+                        href="https://en.wikipedia.org/wiki/SSHFP_record">Enregistrements SSHFP</a>, autrement dit
+                        empreintes digitales SSH. Cela vous permet également d'établir des connexions SSH sans avoir à
+                        gérer le fichier known_hosts.
                     </p>
                 </div>
 
                 <div class="category" id="authentication-mgmt">
                     <h3 class="fg-color-3">Source d'authentification unique</h3>
-                    <p>Les utilisateurs sont authentifiés à l'aide de l'annuaire OpenLDAP comme source unique.
-                        Les mots de passe initiaux sont générés automatiquement et les politiques de mots de passe et l'âge maximum sont appliqués.
-                        Enfin, les utilisateurs peuvent facilement modifier leur mot de passe à l'aide d'une interface Web très simple.
+                    <p>Les utilisateurs sont authentifiés à l'aide de l'annuaire OpenLDAP comme source unique.  Les mots
+                        de passe initiaux sont générés automatiquement et les politiques de mots de passe et l'âge
+                        maximum sont appliqués.  Enfin, les utilisateurs peuvent facilement modifier leur mot de passe à
+                        l'aide d'une interface Web très simple.
                     </p>
                 </div>
 
                 <div class="category" id="integrated-backup">
                     <h3 class="fg-color-3">Sauvegarde intégrée</h3>
-                    <p>Le système est livré avec le <a target="_blank" href="https://www.borgbackup.org">système de sauvegarde borg</a>,
-                        configuration pour sauvegarder les e-mails, ainsi que les calendriers et les contacts de tous les utilisateurs.
-                        Plusieurs destinations de sauvegarde peuvent être spécifiées, avec plusieurs fréquences également.
-                        Les cibles peuvent être un disque physique connecté monté dans un répertoire,
-                        ou un même système distant, en utilisant Samba ou SFTP.
+                    <p>Le système est livré avec le <a target="_blank" href="https://www.borgbackup.org">système de
+                        sauvegarde borg</a>, configuration pour sauvegarder les e-mails, ainsi que les calendriers et
+                        les contacts de tous les utilisateurs.  Plusieurs destinations de sauvegarde peuvent être
+                        spécifiées, avec plusieurs fréquences également.  Les cibles peuvent être un disque physique
+                        connecté monté dans un répertoire, ou un même système distant, en utilisant Samba ou SFTP.
                     </p>
                 </div>
             </div>
@@ -125,30 +138,34 @@
 
                 <div class="category" id="app-armor">
                     <h3 class="fg-color-3">Utilisation d'AppArmor</h3>
-                    <p>Tous les services exécutés sous des profils <a target="_blank" href="https://www.apparmor.net/">AppArmor</a> dédiés.
-                        Cela protège de manière proactive le système d'exploitation et les applications contre les menaces externes ou internes,
-                        même les attaques du jour zéro. Il impose un bon comportement et empêche l’exploitation des failles d’application connues et inconnues.
+                    <p>Tous les services exécutés sous des profils <a target="_blank"
+                        href="https://www.apparmor.net/">AppArmor</a> dédiés.  Cela protège de manière proactive le
+                        système d'exploitation et les applications contre les menaces externes ou internes, même les
+                        attaques du jour zéro. Il impose un bon comportement et empêche l’exploitation des failles
+                        d’application connues et inconnues.
                     </p>
                 </div>
 
                 <div class="category" id="auto-updates">
                     <h3 class="fg-color-3">Mises à jour automatiques</h3>
-                    <p>Les mises à jour standard et de sécurité sont automatiquement installées à l'aide du paquet Debian.
-                        <a href="https://wiki.debian.org/UnattendedUpgrades">unattended-upgrades</a>.
-                        Les services sont automatiquement redémarrés en cas de besoin, minimisant la maintenance tout en augmentant la sécurité.
-                        Le système peut également être configuré pour redémarrer automatiquement lorsque le noyau a été mis à jour.
-                        Enfin, un e-mail est automatiquement envoyé au postmaster lorsque les packages ont été mis à niveau ou
-                        lorsque le système a été redémarré.
+                    <p>Les mises à jour standard et de sécurité sont automatiquement installées à l'aide du paquet
+                    Debian.
+                        <a href="https://wiki.debian.org/UnattendedUpgrades">unattended-upgrades</a>.  Les services sont
+                        automatiquement redémarrés en cas de besoin, minimisant la maintenance tout en augmentant la
+                        sécurité.  Le système peut également être configuré pour redémarrer automatiquement lorsque le
+                        noyau a été mis à jour.  Enfin, un e-mail est automatiquement envoyé au postmaster lorsque les
+                        packages ont été mis à niveau ou lorsque le système a été redémarré.
                     </p>
                 </div>
 
                 <div class="category" id="pare-feu">
                     <h3 class="fg-color-3">Pare-feu puissant</h3>
                     <p>Les connexions entrantes et sortantes sont filtrées à l'aide de nftables modernes. Pour les
-                        connexions entrantes, seuls les services publics sont autorisés. Pour les connexions sortantes, seul le trafic
-                        nécessaire est autorisé, et une liste blanche de proxy est utilisée qui permet uniquement d'accéder uniquement aux sites
-                        requis, par exemple les mises à jour de sécurité Debian ou les sites liés à LetsEncrypt, Enfin, les échecs
-                        d'authentification bannissent automatiquement les adresses IP utilisant nftables.
+                        connexions entrantes, seuls les services publics sont autorisés. Pour les connexions sortantes,
+                        seul le trafic nécessaire est autorisé, et une liste blanche de proxy est utilisée qui permet
+                        uniquement d'accéder uniquement aux sites requis, par exemple les mises à jour de sécurité
+                        Debian ou les sites liés à LetsEncrypt, Enfin, les échecs d'authentification bannissent
+                        automatiquement les adresses IP utilisant nftables.
                     </p>
                 </div>
             </div>
@@ -159,59 +176,61 @@
                 <div class="category" id="webmail">
                     <h3 class="fg-color-3">Interface web réactive</h3>
                     <p>Vous pouvez accéder à vos e-mails, calendriers et contacts à l'aide d'un navigateur Web moderne,
-                        depuis un ordinateur de bureau ou un client mobile,
-                        grâce à l'interface web agréable et réactive implémentée par <a target="_blank" href="https://sogo.nu/">SOGo</a>.
-                        Pour plus de sécurité, une authentification facultative à deuxième facteur peut être ajoutée, en utilisant la norme TOTP.
+                        depuis un ordinateur de bureau ou un client mobile, grâce à l'interface web agréable et réactive
+                        implémentée par <a target="_blank" href="https://sogo.nu/">SOGo</a>.  Pour plus de sécurité, une
+                        authentification facultative à deuxième facteur peut être ajoutée, en utilisant la norme TOTP.
                     </p>
                     <p class="details">💡 <a href="sogo-fr.html" title="screenshot">Plus de details ici</a></p>
                 </div>
 
                 <div class="category" id="mail-autoconfig">
                     <h3 class="fg-color-3">Détection des paramètres de messagerie</h3>
-                    <p>Des enregistrements DNS spéciaux et des paramètres Web sont générés, permettant à tout client de messagerie moderne de détecter les paramètres.
-                        Fonctionne avec les clients de bureau, comme Thunderbird, Evolution, Outlook, etc. et les clients mobiles
-                        comme <a target="_blank" href="https://k9mail.app/">K-9 Mail</a> ou
+                    <p>Des enregistrements DNS spéciaux et des paramètres Web sont générés, permettant à tout client de
+                        messagerie moderne de détecter les paramètres.  Fonctionne avec les clients de bureau, comme
+                        Thunderbird, Evolution, Outlook, etc. et les clients mobiles comme <a target="_blank"
+                        href="https://k9mail.app/">K-9 Mail</a> ou
                         <a target="_blank" href="https://email.faircode.eu/">FairEmail</a>.
                     </p>
-                    <p class="details">💡 <a href="mail-autoconfig-fr.html" title="screenshot">Voir plus de détails</a>.</p>
+                    <p class="details">💡 <a href="mail-autoconfig-fr.html" title="screenshot">Voir plus de
+                    détails</a>.</p>
                 </div>
 
                 <div class="category" id="mail-antispam">
                     <h3 class="fg-color-3">Antispam moderne</h3>
-                    <p>L'antispam choisi est <a href="https://www.rspamd.com/" target="_blank">rspamd</a>,
-                        qui est à la fois puissant et extrêmement simple à utiliser.
-                        Les e-mails reconnus comme indésirables sont automatiquement placés dans le dossier Courrier indésirable dès leur réception.
-                        Pour les courriers indésirables manqués, leur déplacement dans le dossier indésirable entraîne automatiquement le système.
-                        À l'inverse, en déplaçant un e-mail hors du dossier Courrier indésirable, marquez l'e-mail comme valide, c'est-à-dire <em>ham</em>.
+                    <p>L'antispam choisi est <a href="https://www.rspamd.com/" target="_blank">rspamd</a>, qui est à la
+                        fois puissant et extrêmement simple à utiliser.  Les e-mails reconnus comme indésirables sont
+                        automatiquement placés dans le dossier Courrier indésirable dès leur réception.  Pour les
+                        courriers indésirables manqués, leur déplacement dans le dossier indésirable entraîne
+                        automatiquement le système.  À l'inverse, en déplaçant un e-mail hors du dossier Courrier
+                        indésirable, marquez l'e-mail comme valide, c'est-à-dire <em>ham</em>.
                     </p>
                     <p class="details">💡 <a href="mail-antispam-fr.html" title="screenshot">Voir plus de détails</a></p>
                 </div>
 
                 <div class="category" id="mail-antivirus">
                     <h3 class="fg-color-3">Antivirus en option</h3>
-                    <p>Vous pouvez utiliser l'excellent antivirus Clam-AV pour vérifier la saisie des emails,
-                        ainsi que ceux envoyés par les utilisateurs. Les e-mails contenant des virus peuvent être supprimés ou rejetés en silence,
-                        tandis que les e-mails sortants contenant des virus sont renvoyés.
+                    <p>Vous pouvez utiliser l'excellent antivirus Clam-AV pour vérifier la saisie des emails, ainsi que
+                        ceux envoyés par les utilisateurs. Les e-mails contenant des virus peuvent être supprimés ou
+                        rejetés en silence, tandis que les e-mails sortants contenant des virus sont renvoyés.
                     </p>
                 </div>
 
                 <div class="category" id="mail-advanced">
                     <h3 class="fg-color-3">Caractéristiques mails avancés</h3>
-                    <p>Le serveur est doté de fonctionnalités avancées, certaines incluses par défaut, d’autres facultatives pour des utilisateurs
-                        spécifiques. Par exemple, par défaut, les quotas, les filtres côté serveur, les dossiers virtuels,
-                        les contrôles de confidentialité ou la copie automatique dans le dossier « envoyé », sont inclus.
-                        Des fonctionnalités plus avancées peuvent être configurées dynamiquement en fonction de vos besoins.
-                        Cela inclut par exemple la recherche en texte intégral, usurpation d'identité de mails,
-                        autres serveurs de messagerie autorisés, etc.
-                    </p>
-                    <p class="details">💡 <a href="mail-advanced-fr.html" title="Caractéristiques avancées">Voir plus de détails</a></p>
+                    <p>Le serveur est configuré avec des fonctionnalités avancées, certaines incluses par défaut,
+                        d'autres facultatives.  Sont inclus par défaut les quotas, les filtres côté serveur, les options
+                        de confidentialité et la copie automatique des messages envoyés. Les fonctions en options sont
+                        par exemple les dossiers virtuels, la recherche en texte intégral, utilisateur principal, etc.
+                    <p class="details">💡 <a href="mail-advanced-fr.html" title="Caractéristiques avancées">Voir plus de
+                    détails</a></p>
                 </div>
 
                 <div class="category" id="jabber">
                     <h3 class="fg-color-3">Serveur Jabber</h3>
-                    <p>Vous pouvez également installer un serveur Jabber, qui vous permet d'envoyer des messages à toute personne utilisant Jabber,
-                        sur le même serveur ou sur d'autres domaines. Le serveur prend en charge les appels audio et vidéo depuis les téléphones mobiles.
-                        Les messages peuvent également être chiffrés à l'aide d'Omemo ou de GPG, si votre client le prend en charge.
+                    <p>Vous pouvez également installer un serveur Jabber, qui vous permet d'envoyer des messages à toute
+                        personne utilisant Jabber, sur le même serveur ou sur d'autres domaines. Le serveur prend en
+                        charge les appels audio et vidéo depuis les téléphones mobiles.  Les messages peuvent également
+                        être chiffrés à l'aide d'Omemo ou de GPG, si votre client le prend en charge.
                     </p>
                 </div>
             </div>
