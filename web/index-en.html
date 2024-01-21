@@ -18,8 +18,9 @@
                 a solution optmised for <em>daily usage</em> rather than development.
             </p>
 
-            <div class="col-left">
-                <div id="pros">
+            <section class="clear">
+                <h2>Pro and cons</h2>
+                <div class="col-left">
                     <p><span class="emoji">✔️ </span>This project <em>is for you</em> if:</p>
                     <ul>
                         <li>You are interested to host your emails and personal information yourself, for privacy,
@@ -47,7 +48,7 @@
                         <li>The security of your platform is not your main concern.</li>
                     </ul>
                 </div>
-            </div>
+            </section>
 
             <p class="clear">It is using a set of Ansible scripts to setup the whole platform from a freshly installed
                 Debian server.  Therefore, you need to be familiar with Ansible and the command line.  The system can be
@@ -81,6 +82,8 @@
                         <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>
                         implemented to prevent man-in-the-middle traffic interception.
                     </p>
+                    <p class="details">💡 <a href="strong-tls-en.html" title="Strong TLS encryption page">More details
+                    here</a></p>
                 </div>
 
                 <div class="category" id="modern-dns">
@@ -149,7 +152,7 @@
                     <h3 class="fg-color-3">Strong Firewall</h3>
                     <p>Both inbound and outbound connections are filtered. For outbound connections, only the necessary
                         traffic is allowed, and a proxy whitelist is used restricting the traffic to the strict
-                        necessary. Finally, authentication failures automatically ban IP addresses using nftables.
+                        necessary. Finally, authentication failures automatically ban IP addresses.
                     </p>
                 </div>
             </section>
@@ -213,6 +216,9 @@
                         on the same server or on other domains. The server supports audio and video calls from mobile
                         phones.  Messages can be encrypted using omemo or GPG as well, if your client supports it.
                     </p>
+                    <p class="details">💡 <a href="jabber-en.html" title="Jabber server">
+                            More details here
+                    </a></p>
                 </div>
 
             </section>

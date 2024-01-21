@@ -21,4 +21,7 @@ pre {
     max-width: 80%;
     margin: 1em 10%;
     white-space: pre-line;
+    overflow-wrap: normal;
+    white-space: pre;
+    overflow: auto;
 }

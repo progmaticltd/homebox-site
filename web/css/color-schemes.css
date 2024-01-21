@@ -52,7 +52,7 @@
     }
 
     .shadow {
-        box-shadow: 0 4pt 8pt 0 rgba(0, 0, 0, 0.2), 0 6pt 20pt 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4pt 8pt 0 rgba(0, 0, 0, .8), 0 6pt 20pt 0 rgba(0, 0, 0, .6);
     }
 }
 
@@ -105,6 +105,6 @@
     }
 
     .shadow {
-        box-shadow: 0 4pt 8pt 0 rgba(255, 255, 255, 0.2), 0 6pt 20pt 0 rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4pt 8pt 0 rgba(255, 255, 255, .2), 0 6pt 20pt 0 rgba(255, 255, 255, .1);
     }
 }

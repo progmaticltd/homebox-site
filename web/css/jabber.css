@@ -1,0 +1,41 @@
+/* dino-setup animatino */
+div#dino-setup {
+    height: 418px;
+    margin: 1em auto;
+    text-align: center;
+    overflow: hidden;
+    padding: 0px;
+}
+
+#jab-shot-1 {
+    animation-name: autohide;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-composition: replace;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+#jab-shot-2 {
+    animation-name: autohide;
+    animation-delay: 7s;
+    animation-duration: 3s;
+    animation-composition: replace;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+#jab-shot-3 {
+    overflow: hidden;
+}
+
+@keyframes autohide {
+    from {
+        height: 418px;
+        opacity: 1;
+    }
+    to {
+        height: 0;
+        opacity: 0;
+    }
+}
