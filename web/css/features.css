@@ -2,7 +2,6 @@ img.screenshot-mini {
     max-width: 48%;
     margin-right: 1%;
     border-radius: 10px;
-    box-shadow: 0 4pt 8pt 0 rgba(0, 0, 0, 0.2), 0 6pt 20pt 0 rgba(0, 0, 0, 0.19);
     float: left;
 }
 
@@ -10,17 +9,14 @@ img.screenshot-mini-center {
     max-width: 98%;
     margin: 0 1%;
     border-radius: 10px;
-    box-shadow: 0 4pt 8pt 0 rgba(0, 0, 0, 0.2), 0 6pt 20pt 0 rgba(0, 0, 0, 0.19);
 }
 
 img.screenshot-square {
     max-width: 60%;
     margin: 1em 20%;
-    box-shadow: 0 4pt 8pt 0 rgba(0, 0, 0, 0.2), 0 6pt 20pt 0 rgba(0, 0, 0, 0.19);
 }
 
 img.screenshot-landscape {
     max-width: 90%;
     margin: 2em 5%;
-    box-shadow: 0 4pt 8pt 0 rgba(0, 0, 0, 0.2), 0 6pt 20pt 0 rgba(0, 0, 0, 0.19);
 }
