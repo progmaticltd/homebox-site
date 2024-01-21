@@ -1,3 +1,4 @@
+# preview the site in a docker instance, used for local development.
 FROM nginx
 
 # Use specific configuration (ssi)
