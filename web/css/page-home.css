@@ -6,17 +6,22 @@ h1 {
     letter-spacing: 1pt;
 }
 
-h1 span {
+hgroup h1 {
+    margin-bottom: 0;
+}
+hgroup p {
     font-size: x-small;
     display: block;
     font-style: italic;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3em;
 }
 
 h2 {
     text-align: center;
     letter-spacing: 1pt;
     padding-top: 2em;
-    border-bottom: 2pt solid;
 }
 
 h3 {

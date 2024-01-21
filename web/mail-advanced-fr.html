@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--# include file=".include/html-headers.html" -->
+        <title>Homebox — self-hosting</title>
+        <link rel="stylesheet" media="screen" href="/css/features.css">
+    </head>
+    <body>
+        <!--# include file=".include/header.html" -->
+        <h1 class="fg-color-1">Caractéristiques emails avancées</h1>
+
+        <h2>Filtres côté serveur</h2>
+        <p>
+            La platteforme supporte les filtres <a target="_blank"
+            href="https://en.wikipedia.org/wiki/Sieve_(mail_filtering_language)">Sieve</a>.
+            Sieve est un language de programmation simple, qui spécifie les conditions de filtrage, et les actions à effectuer.
+        </p>
+
+        <p>Les filtres peuvent être modifiés à l'aide d'une interface facile à utiliser, fournie dans la messagerie Web,
+        avec les fonctionnalités suivantes :</p>
+
+        <section class="col-left">
+            <p>Conditions à respecter :</p>
+            <ul>
+                <li>Rechercher dans un en-tête (sujet, de, à, à &amp; cc, bcc) ou le corps entier</li>
+                <li>Rechercher dans un en-tête personnalisé (par exemple, Mime-Version, X-Mailgun-Tag, etc...)</li>
+                <li>Selon la taille du message (par exemple, supérieure à 100ko, inférieure à 1mega, etc...)</li>
+                <li>Rechercher une chaîne simple, des caractères jokers ou même des expressions rationelles !</li>
+            </ul>
+        </section>
+        <section class="col-right">
+            <p>Actions possibles :</p>
+            <ul>
+                <li>Ajoutez des indicateurs au message : par ex. <em>Vu</em>, <em>indésirable</em>, etc...</li>
+                <li>Classer le message dans un dossier.</li>
+                <li>Transférer le message vers une autre adresse.</li>
+                <li>Rejeter le message.</li>
+                <li>Silencieusement supprimer le message.</li>
+                <li>Accepter le message.</li>
+            </ul>
+        </section>
+
+        <details class="clear">
+            <summary>Capture d'écran</summary>
+            <img src="/img/email-filter-creation.png" alt="Email filter creation" class="screenshot-square">
+        </details>
+
+        <p>Des fonctionnalités plus avancées peuvent être modifiées à l'aide de n'importe quel client compatible avec le
+            protocole <em>ManageSieve</em>.</p>
+        <details>
+            <summary>Examples</summary>
+            <pre>
+                <code>
+                    require ["variables","date","fileinto","mailbox"];
+
+                    # Extract date info
+                    if currentdate :matches "year" "*" { set "year" "${1}"; }
+                    if currentdate :matches "month" "*" { set "month" "${1}"; }
+
+                    # Archive Dovecot mailing list items by year and month.
+                    # Create folder when it does not exist.
+                    if header :is "list-id" "dovecot.dovecot.org" {
+                        fileinto :create "INBOX.Lists.${year}.${month}.dovecot";
+                    }
+                </code>
+            </pre>
+            <p><a target="_blank" href="https://doc.dovecot.org/configuration_manual/sieve/examples/">Plus d'exemples</a></p>
+        </details>
+
+        <h2>Dossiers virtuels</h2>
+        <p>Dossiers virtuels, vous permettant de sélectionner rapidement des e-mails à partir des critères les plus courants</p>
+        <ul>
+            <li>Tous les messages : avec ou sans limite de temps, pour des raisons de performances</li>
+            <li>Conversations : agrégation automatique des dossiers <em>Boîte de réception</em> et <em>Envoyés</em>,
+            regroupés par fil de discussion</li>
+            <li>Marqué : tous les messages <em>marqués</em> avec votre client IMAP</li>
+            <li>Important : tous les messages marqués à l'aide de la balise <em>Important</em>.</li>
+            <li>Non lus : messages non lus</li>
+        </ul>
+        <details>
+            <summary>Captures d'écran</summary>
+            <img src="/img/email-virtual-folders.png" alt="Capture d'écran des dossiers virtuels" class="screenshot-square">
+        </details>
+
+        <h2>Vacances et absence</h2>
+        <p>
+            Vous permet de répondre automatiquement aux e-mails reçus, lorsque vous êtes en vacances ou absent du
+            bureau, en utilisant divers critères :
+        </p>
+        <ul>
+            <li>Par date exacte, entre deux jours.</li>
+            <li>Selon l'heures de réception, par exemple avant 8h00 et après 17h00.</li>
+            <li>Selon le jour de la semaine, par exemple samedi et dimanche</li>
+        </ul>
+        <p>Divers autres critères sont possibles, comme la gestion des listes de diffusion, ou être
+            exécutés <em>après</em> les uns les autres filtres.</p>
+        <details>
+            <summary>Captures d'écran</summary>
+            <img src="/img/email-vacation.png" alt="Capture d'écran des paramètres de vacances" class="screenshot-landscape">
+        </details>
+
+        <h2>Transférer</h2>
+        <p>Transférez automatiquement tous vos e-mails vers une adresse e-mail externe.</p>
+        <details>
+            <summary>Captures d'écran</summary>
+            <img src="/img/email-forward.png" alt="Capture d'écran des paramètres de transfert" class="screenshot-landscape">
+        </details>
+
+         <h2>Recherche en texte intégral</h2>
+         <p>
+             Depuis l'interface Web, recherchez directement du texte à l'intérieur du corps de l'e-mail et des fichiers
+             joints, compressés ou non. les archives également. Les formats reconnus pour les pièces jointes sont les
+             fichiers Microsoft Office, les fichiers OpenDocument, fichiers texte, PDF, etc.
+         </p>
+         <details>
+             <summary>Captures d'écran</summary>
+             <img src="/img/email-fts.png" alt="Rechercher dans les captures d'écran des pièces jointes" class="screenshot-landscape">
+         </details>
+
+         <h2>Utilisateur principal</h2>
+         <p>Cette fonctionnalité facultative est parfaite pour les familles avec des mineurs et les communautés. Il vous
+             permet de créer un <em>utilisateur principal</em>, autorisé à usurper l'identité de n'importe quel
+             utilisateur pour vérifier ses e-mails.
+         </p>
+
+        <h2>Dossier de classement</h2>
+        <p>
+            Les délimiteurs de destinataires vous permettent de créer des alias dynamiques et de stocker des e-mails
+            directement dans des vos dossiers. La syntaxe est <samp>user+mailbox@domain</samp>. Ici, le délimiteur du
+            destinataire, est le caractère <samp>+</samp>, mais vous pouvez définir, dans votre configuration, de
+            nombreux autres caractères, pour autant qu'ils soient valides dans une adresse email.
+        </p>
+
+        <p>Quelques exemples</p>
+        <ul>
+            <li>john.doe~hosting@example.com</li>
+            <li>jane.doe/social@example.com</li>
+        </ul>
+        <p>
+            Les caractères suivants sont reconnus : <samp>!#$%&'*+-/=?^_`{|}~</samp>.
+        </p>
+
+        <h2>Fonctionnalités de confidentialité</h2>
+
+        <p>Diverses fonctionnalités de confidentialité sont incluses par défaut :</p>
+        <ul>
+            <li>Obscurcir le client de messagerie : lors de l'envoi d'un e-mail, supprimez l'<em>agent utilisateur</em>
+            inclus dans l'e-mail en-têtes.</li>
+            <li>Supprimer le chemin réseau contenant les adresses IP.</li>
+            <li>Supprimer les informations privées des journaux de connexion <em>(en développement)</em>.</li>
+        </ul>
+        <p>La chaine de caractère <dfn>User-Agent</dfn> est un en-tête automatiquement ajouté par certains clients de
+        messagerie, identifiant le programme utilisé pour rédiger et envoyer l'e-mail.</p>
+
+        <!--# include file=".include/footer.html" -->
+    </body>
+</html>

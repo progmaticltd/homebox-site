@@ -21,3 +21,26 @@ a.no-decoration {
 header div {
     border-bottom: 1px solid;
 }
+
+/* Details */
+details summary {
+    font-size: smaller;
+}
+
+details summary:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Samples */
+samp {
+    font-family: monospace;
+    border: 1px dotted;
+}
+
+pre {
+    border: 1pt solid;
+    padding: 4pt;
+    max-width: 80%;
+    margin: 1em 10%;
+}

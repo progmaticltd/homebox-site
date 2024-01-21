@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<!--# include file=".include/html-headers.html" -->
-	<title>Homebox — self-hosting</title>
-	<link rel="stylesheet" media="screen" href="/css/page-home.css">
+        <!--# include file=".include/html-headers.html" -->
+        <title>Homebox — self-hosting</title>
+        <link rel="stylesheet" media="screen" href="/css/page-home.css">
     </head>
     <body>
         <!--# include file=".include/header.html" -->
-        <h1 class="fg-color-1">HomeBox
-	    <span>Self-hosting for the perfectionnists.</span>
-	</h1>
+        <hgroup class="fg-color-1">
+            <h1>HomeBox</h1>
+            <p>Self-hosting for the perfectionnists.</p>
+        </hgroup>
         <div class="main-content clear">
             <p>Homebox is a free and open source self-hosting solution, based on Debian GNU/Linux. It let you manage
                 your personal information like your emails, your contacts, your calendars and even more, in a safest but
@@ -17,7 +18,7 @@
                 It is a solution optmised for <em>daily usage</em> rather than development.
             </p>
 
-            <div id="pros-and-cons" class="clear">
+            <div class="col-left">
                 <div id="pros">
                     <p><span class="emoji">✔️ </span>This project <em>is for you</em> if:</p>
                     <ul>
@@ -30,13 +31,13 @@
                     </ul>
                 </div>
 
-                <div id="cons">
+                <div class="col-right">
                     <p><span class="emoji">❌ ️</span>However, this project is <em>not for you</em> if:</p>
                     <ul>
                         <li>You prefer deploying software directly from source rather than installing packages from a distribution.</li>
                         <li>You want to use popular “web clouds” written in PHP, like <em>owncloud</em> or <em>nextcloud</em>.</li>
                         <li>You are planning to follow security alerts and apply patches manually.</li>
-                        <li>You don’t mind fixing incompatibilities between different packages manually installed on a server.</li>
+                        <li>You enjoy fixing incompatibilities between different packages manually installed on a server.</li>
                         <li>You favour the number of features over reliability and stability.</li>
                         <li>The security of your platform is not your main concern.</li>
                     </ul>
@@ -195,6 +196,7 @@
                         More advanced features could be dynamically configured according to your needs. This includes for instance full text search,
                         mails impersonation, other mail servers authorised, etc.
                     </p>
+                    <p class="details">💡 <a href="mail-advanced-en.html" title="advanced features">More details here</a></p>
                 </div>
 
                 <div class="category" id="jabber">
@@ -237,9 +239,9 @@
                         Alerts are sent both using email to an external email address and using Jabber as well.
                     </p>
                     <p class="details">💡 More details here:
-			<a href="monitoring-en.html" title="screenshot">Monitoring</a> /
-			<a href="alerting-en.html" title="screenshot">Alerting</a>
-		    </p>
+                        <a href="monitoring-en.html" title="screenshot">Monitoring</a> /
+                        <a href="alerting-en.html" title="screenshot">Alerting</a>
+                    </p>
                 </div>
 
                 <div class="category" id="web-keys-directory">
