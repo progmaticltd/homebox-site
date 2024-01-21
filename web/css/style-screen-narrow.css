@@ -38,3 +38,12 @@ div#cons {
     margin-left: 1%;
     float: left;
 }
+
+
+pre {
+    border: 1pt solid;
+    padding: 4pt;
+    max-width: 90%;
+    margin: 1em 5%;
+    white-space: pre-line;
+}

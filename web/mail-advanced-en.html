@@ -57,7 +57,7 @@
                     # Archive Dovecot mailing list items by year and month.
                     # Create folder when it does not exist.
                     if header :is "list-id" "dovecot.dovecot.org" {
-                        fileinto :create "INBOX.Lists.${year}.${month}.dovecot";
+                        fileinto :create "INBOX.Lists.${year}.${month}.dovecot";
                     }
                 </code>
             </pre>
@@ -121,8 +121,9 @@
         <h2>Recipient delimiters</h2>
         <p>
             Recipient delimiters, allows you to create dynamic aliases, and to store emails into mailboxes directly. The
-            syntax is <samp>user+mailbox@domain</samp>. Here, the recipient delimiter, <samp>+</samp>, but you can
-            define, in your configuration, many other characters, as long as they are valid in an email address.
+            syntax is <samp>user+mailbox@domain</samp>. Here, the recipient delimiter,
+            <samp class="chars">+</samp>, but you can define, in your configuration, many other characters, as long as
+            they are valid in an email address.
         </p>
         <p>Some samples</p>
         <ul>
@@ -130,7 +131,7 @@
             <li>jane.doe/social@example.com</li>
         </ul>
         <p>
-            The following characters are recognised: <samp>!#$%&'*+-/=?^_`{|}~</samp>.
+            The following characters are recognised: <samp class="chars">!#$%&'*+-/=?^_`{|}~</samp>.
         </p>
 
         <h2>Privacy features</h2>
