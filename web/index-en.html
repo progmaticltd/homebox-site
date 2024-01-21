@@ -14,16 +14,18 @@
         <div class="main-content clear">
             <p>Homebox is a free and open source self-hosting solution, based on Debian GNU/Linux. It let you manage
                 your personal information like your emails, your contacts, your calendars and even more, in a safest but
-                still simplest possible way.  It is particularly well suited for families and small communities.
-                It is a solution optmised for <em>daily usage</em> rather than development.
+                still simplest possible way.  It is particularly well suited for families and small communities.  It is
+                a solution optmised for <em>daily usage</em> rather than development.
             </p>
 
             <div class="col-left">
                 <div id="pros">
                     <p><span class="emoji">✔️ </span>This project <em>is for you</em> if:</p>
                     <ul>
-                        <li>You are interested to host your emails and personal information yourself, for privacy, security, freedom, fun, etc.</li>
-                        <li>You only want to host personal data, like emails, contacts, calendars and personal files.</li>
+                        <li>You are interested to host your emails and personal information yourself, for privacy,
+                        security, freedom, fun, etc.</li>
+                        <li>You only want to host personal data, like emails, contacts, calendars and personal
+                        files.</li>
                         <li>You want your server to be secure against both physical and remote intrusion.</li>
                         <li>You want a low maintenance system, that keep itself updated automatically.</li>
                         <li>You trust the Debian community to publish security updates.</li>
@@ -34,26 +36,30 @@
                 <div class="col-right">
                     <p><span class="emoji">❌ ️</span>However, this project is <em>not for you</em> if:</p>
                     <ul>
-                        <li>You prefer deploying software directly from source rather than installing packages from a distribution.</li>
-                        <li>You want to use popular “web clouds” written in PHP, like <em>owncloud</em> or <em>nextcloud</em>.</li>
+                        <li>You prefer deploying software directly from source rather than installing packages from a
+                        distribution.</li>
+                        <li>You want to use popular “web clouds” written in PHP, like <em>owncloud</em>
+                        or <em>nextcloud</em>.</li>
                         <li>You are planning to follow security alerts and apply patches manually.</li>
-                        <li>You enjoy fixing incompatibilities between different packages manually installed on a server.</li>
+                        <li>You enjoy fixing incompatibilities between different packages manually installed on a
+                        server.</li>
                         <li>You favour the number of features over reliability and stability.</li>
                         <li>The security of your platform is not your main concern.</li>
                     </ul>
                 </div>
             </div>
 
-            <p class="clear">It is using a set of Ansible scripts to setup the whole platform from a freshly installed Debian server.
-                Therefore, you need to be familiar with Ansible and the command line.
-                The system can be installed on a stand-alone server at home, or on a dedicated or virtual server hosted online.</p>
+            <p class="clear">It is using a set of Ansible scripts to setup the whole platform from a freshly installed
+                Debian server.  Therefore, you need to be familiar with Ansible and the command line.  The system can be
+                installed on a stand-alone server at home, or on a dedicated or virtual server hosted online.</p>
 
             <p>The source code of the main repository can be viewed on GitHub</p>
             <ul>
                 <li><a href="https://github.com/progmaticltd/homebox">Main repository</a></li>
-                <li><a href="https://github.com/progmaticltd/homebox-cloud-modules">Cloud specific roles</a>, to be run <em>before</em>
-                    installing the main distribution.</li>
-                <li><a href="https://github.com/progmaticltd/homebox-extra-modules">Additional roles with non-core functions</a>.</li>
+                <li><a href="https://github.com/progmaticltd/homebox-cloud-modules">Cloud specific roles</a>, to be
+                    run <em>before</em> installing the main distribution.</li>
+                <li><a href="https://github.com/progmaticltd/homebox-extra-modules">Additional roles with non-core
+                functions</a>.</li>
                 <li><a href="https://github.com/progmaticltd/homebox-site">This documentation website</a>.</li>
             </ul>
 
@@ -62,9 +68,9 @@
 
                 <div class="category" id="debian-run">
                     <h3 class="fg-color-3">Runs on Debian</h3>
-                    <p>Run on a standard Debian system without any third party packages or binary files and without modifying system files.
-                        All the core features only requires packages from Debian Bookworm, without even using non-free or contrib sections.
-                        Only one optional feature could be installed using a third party repository, but <em>still</em> receives security updates.
+                    <p>Run on a standard Debian Bookworm, without any third party packages or binary files, main section
+                        only. Only one optional feature could be installed using a third party repository, but
+                        <em>still</em> receives security updates.
                     </p>
                 </div>
 
@@ -79,37 +85,41 @@
 
                 <div class="category" id="modern-dns">
                     <h3 class="fg-color-3">Modern DNS server</h3>
-                    <p>A DNS server is implemented with state of the art features.
-                        Thanks to <a target="_blank" href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>,
-                        each record is signed using a public key infrastructure.
-                        <a target="_blank" href="https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization">CAA records</a>,
-                        to certify the origin of your certificates, preventing any other organisation than letsencrypt to create certificates.
+                    <p>A DNS server is implemented with state of the art features.  Thanks to <a target="_blank"
+                        href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>, each
+                        record is signed using a public key infrastructure.
+                        <a target="_blank"
+                        href="https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization">CAA records</a>,
+                        to certify the origin of your certificates, preventing any other organisation than letsencrypt
+                        to create certificates.
                     </p>
                 </div>
 
                 <div class="category" id="ssh-fingerprint">
                     <h3 class="fg-color-3">SSH fingerprint records</h3>
-                    <p>To prevent man in the middle when using SSH connections, the public keys are published on the DNS server, using
-                        <a target="_blank" href="https://en.wikipedia.org/wiki/SSHFP_record">SSHFP records</a> aka SSH fingerprints.
-                        This also allows you to establish SSH connections without having to manage known_hosts file.
+                    <p>To prevent man in the middle when using SSH connections, the public keys are published on the DNS
+                    server, using
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/SSHFP_record">SSHFP records</a> aka SSH
+                        fingerprints.  This also allows you to establish SSH connections without having to manage
+                        known_hosts file.
                     </p>
                 </div>
 
                 <div class="category" id="authentication-mgmt">
                     <h3 class="fg-color-3">Single authentication source</h3>
-                    <p>Users are authenticated using the good and reliable OpenLDAP directory as a single source.
-                        The initial passwords are automatically generated, and password policies and maximum age are enforced.
-                        Finally, users are able to easily change their password using the very simple web interface.
+                    <p>Users are authenticated using the good and reliable OpenLDAP directory as a single source.  The
+                        initial passwords are automatically generated, and password policies and maximum age are
+                        enforced.  Finally, users are able to easily change their password using the very simple web
+                        interface.
                     </p>
                 </div>
 
                 <div class="category" id="integrated-backup">
                     <h3 class="fg-color-3">Integrated backup</h3>
                     <p>The system comes with <a target="_blank" href="https://www.borgbackup.org">borg backup</a>,
-                        configuration to backup emails, as well as calendars and contacts for all the users.
-                        Multiple backup destinations can be specified, with multiple frequencies as well.
-                        The targets could be a physical attached disk mounted in a directory,
-                        or a remote system, using Samba or SFTP.
+                        configuration to backup emails, as well as calendars and contacts for all the users.  Multiple
+                        backup destinations can be specified, with multiple frequencies as well.  The targets could be a
+                        physical attached disk mounted in a directory, or a remote system, using Samba or SFTP.
                     </p>
                 </div>
             </div>
@@ -119,30 +129,27 @@
 
                 <div class="category" id="app-armor">
                     <h3 class="fg-color-3">AppArmor enforcing</h3>
-                    <p>All services running under dedicated <a target="_blank" href="https://www.apparmor.net/">AppArmor</a> enforced profiles.
-                        This proactively protects the operating system and applications from external or internal threats, even zero-day attacks.
-                        It is enforcing good behaviour and preventing both known and unknown application flaws from being exploited.
+                    <p>All services running under dedicated <a target="_blank"
+                        href="https://www.apparmor.net/">AppArmor</a> enforced profiles.  This proactively protects the
+                        operating system and applications from external or internal threats, even zero-day attacks.  It
+                        is enforcing good behaviour and preventing both known and unknown application flaws from being
+                        exploited.
                     </p>
                 </div>
 
                 <div class="category" id="auto-updates">
                     <h3 class="fg-color-3">Automatic updates</h3>
-                    <p>Both standard and security updates are automatically installed using the Debian
-                        <a href="https://wiki.debian.org/UnattendedUpgrades">unattended-upgrades</a> package.
-                        The services are automatically restarted when required, minimising the maintenance, and increasing security.
-                        The system can be also configured to reboot automatically when the kernel has been upgraded.
-                        An email is automatically sent to the postmaster when packages have been upgraded, or when the system has been rebooted.
+                    <p>Both standard and security updates are automatically installed using the standard Debian method.
+                        The services are automatically restarted when required, minimising the maintenance, and increasing
+                        security. The system can be also configured to reboot automatically.
                     </p>
                 </div>
 
                 <div class="category" id="firewall">
                     <h3 class="fg-color-3">Strong Firewall</h3>
-                    <p>Both inbound and outbound connections are filtered using the modern nftables.
-                        For inbound connections, only the public services are authorised.
-                        For outbound connections, only the necessary traffic is allowed,
-                        and a proxy whitelist is used that only allows mandatory sites to be accessed,
-                        for instance the Debian security updates or LetsEncrypt related sites,
-                        Finally, authentication failures automatically ban IP addresses using nftables.
+                    <p>Both inbound and outbound connections are filtered. For outbound connections, only the necessary
+                        traffic is allowed, and a proxy whitelist is used restricting the traffic to the strict
+                        necessary. Finally, authentication failures automatically ban IP addresses using nftables.
                     </p>
                 </div>
             </div>
@@ -152,18 +159,19 @@
 
                 <div class="category" id="webmail">
                     <h3 class="fg-color-3">Responsive web interface</h3>
-                    <p>You can access your emails, calendars and contacts using a modern web browser, from a desktop or a mobile client,
-                        thanks to the nice and responsive web interface implemented by <a target="_blank" href="https://sogo.nu/">SOGo</a>.
-                        For additional security, an optional second factor authentication can be added, using the TOTP standard.
+                    <p>You can access your emails, calendars and contacts using a modern web browser, from a desktop or
+                        a mobile client, thanks to the nice and responsive web interface implemented
+                        by <a target="_blank" href="https://sogo.nu/">SOGo</a>.  For additional security, an optional
+                        second factor authentication can be added, using the TOTP standard.
                     </p>
                     <p class="details">💡 <a href="sogo-en.html" title="screenshot">More details here</a></p>
                 </div>
 
                 <div class="category" id="mail-autoconfig">
                     <h3 class="fg-color-3">Email settings detection</h3>
-                    <p>Special DNS records and web settings are generated, allowing any modern email client to detect settings.
-                        Works with desktop clients, like Thunderbird, Evolution, Outlook, etc. and mobile clients
-                        like <a target="_blank" href="https://k9mail.app/">K-9 Mail</a> or
+                    <p>Special DNS records and web settings are generated, allowing any modern email client to detect
+                        settings.  Works with desktop clients, like Thunderbird, Evolution, Outlook, etc. and mobile
+                        clients like <a target="_blank" href="https://k9mail.app/">K-9 Mail</a> or
                         <a target="_blank" href="https://email.faircode.eu/">FairEmail</a>.
                     </p>
                     <p class="details">💡 <a href="mail-autoconfig-en.html" title="screenshot">More details here</a></p>
@@ -171,38 +179,39 @@
 
                 <div class="category" id="mail-antispam">
                     <h3 class="fg-color-3">Modern antispam</h3>
-                    <p>The anstispam chosen is <a href="https://www.rspamd.com/" target="_blank">rspamd</a>,
-                        which is both powerful and extremely simple to use.
-                        Emails recognised as Junk are automatically placed into the Junk folder upon reception.
-                        For missed spam emails, moving them into the junk folder automatically train the system.
-                        Conversely, moving an email out of the Junk folder, mark the email as valid, aka <em>ham</em>.
+                    <p>The anstispam chosen is <a href="https://www.rspamd.com/" target="_blank">rspamd</a>, which is
+                        both powerful and extremely simple to use.  Emails recognised as Junk are automatically placed
+                        into the Junk folder upon reception.  For missed spam emails, moving them into the junk folder
+                        automatically train the system.  Conversely, moving an email out of the Junk folder, mark the
+                        email as valid, aka <em>ham</em>.
                     </p>
                     <p class="details">💡 <a href="mail-antispam-en.html" title="screenshot">More details here</a></p>
                 </div>
 
                 <div class="category" id="mail-antivirus">
                     <h3 class="fg-color-3">Optional antivirus</h3>
-                    <p>You can use the excellent Clam-AV antivirus to verify entering emails,
-                        as well as the ones sent by the users. Emails entering with viruses can be silently dropped or rejected,
-                        while outgoing emails with viruses are bounced.
+                    <p>You can use the excellent Clam-AV antivirus to verify entering emails, as well as the ones sent
+                        by the users. Emails entering with viruses can be silently dropped or rejected, while outgoing
+                        emails with viruses are bounced.
                     </p>
                 </div>
 
                 <div class="category" id="mail-advanced">
                     <h3 class="fg-color-3">Advanced mail features</h3>
-                    <p>The server comes with advanced features, some of them included by default, some of them optionals.
-                        Included by default are quotas, server side filters, privacy controls and automatic copy to the
-                        sent folder. The optionals are for instance virtual folders, full text search,
+                    <p>The server comes with advanced features, some of them included by default, some of them
+                        optionals.  Included by default are quotas, server side filters, privacy controls and automatic
+                        copy to the sent folder. The optionals are for instance virtual folders, full text search,
                         master user, etc.
                     </p>
-                    <p class="details">💡 <a href="mail-advanced-en.html" title="advanced features">More details here</a></p>
+                    <p class="details">💡 <a href="mail-advanced-en.html" title="advanced features">More details
+                    here</a></p>
                 </div>
 
                 <div class="category" id="jabber">
                     <h3 class="fg-color-3">Jabber server</h3>
                     <p>You can also install a Jabber server, which allows you to send messages to anyone using Jabber,
-                        on the same server or on other domains. The server supports audio and video calls from mobile phones.
-                        Messages can be encrypted using omemo or GPG as well, if your client supports it.
+                        on the same server or on other domains. The server supports audio and video calls from mobile
+                        phones.  Messages can be encrypted using omemo or GPG as well, if your client supports it.
                     </p>
                 </div>
 
@@ -220,22 +229,23 @@
 
                 <div class="category" id="flexible-ip-support">
                     <h3 class="fg-color-3">Flexible IP address support</h3>
-                    <p>Fully support IPv4 alone, IPv6 alone, or even a mix of both.
-                        The system creates and maintains all the DNS records automatically.
+                    <p>Fully support IPv4 alone, IPv6 alone, or even a mix of both.  The system creates and maintains
+                        all the DNS records automatically.
                     </p>
                 </div>
 
                 <div class="category" id="default-site">
                     <h3 class="fg-color-3">Default site</h3>
-                    <p>Generate a default site skeleton for your domain.
-                        This let you focus on your site content without having to handle certificates management nor nginx configuration.
+                    <p>Generate a default site skeleton for your domain.  This let you focus on your site content
+                        without having to handle certificates management nor nginx configuration.
                     </p>
                 </div>
 
                 <div class="category" id="monitoring">
                     <h3 class="fg-color-3">Monitoring and alerting</h3>
-                    <p>Optional monitoring using Prometheus and pre-configured Grafana dashboards for each major service.
-                        Alerts are sent both using email to an external email address and using Jabber as well.
+                    <p>Optional monitoring using Prometheus and pre-configured Grafana dashboards for each major
+                        service.  Alerts are sent both using email to an external email address and using Jabber as
+                        well.
                     </p>
                     <p class="details">💡 More details here:
                         <a href="monitoring-en.html" title="screenshot">Monitoring</a> /
@@ -246,20 +256,19 @@
                 <div class="category" id="web-keys-directory">
                     <h3 class="fg-color-3">GPG Web keys directory</h3>
                     <p>If you are using GPG, <em>Homebox</em> can automatically publish your public key using a
-                        <a href="https://wiki.gnupg.org/WKD" target="_blank">web key directory</a>.
-                        Your contacts will be able to find and import your public key automatically,
-                        and send you encrypted emails more easily.
+                        <a href="https://wiki.gnupg.org/WKD" target="_blank">web key directory</a>.  Your contacts will
+                        be able to find and import your public key automatically, and send you encrypted emails more
+                        easily.
                     </p>
-                    <p class="details">💡 <a href="webkeys-directory-en.html" title="screenshot">More details here</a>.</p>
+                    <p class="details">💡 <a href="webkeys-directory-en.html" title="screenshot">More details
+                    here</a>.</p>
                 </div>
 
                 <div class="category" id="dual-storage">
                     <h3 class="fg-color-3">Dual storage support</h3>
-                    <p>The solution supports two different locations.
-                        The first one is dedicated to day-to-day emails, calendars and contacts, perhaps a fast storage like an SSD drive.
-                        The second one is dedicated to email archives, and the files shared via webdav or Jabber.
-                        For this second location, a slower but bigger and cheaper hard drive can be used.
-                        This helps you to minimise the storage costs, whatever you are using physical server, or cloud VPS server.
+                    <p>The solution supports two different locations. The first one is dedicated to day-to-day emails,
+                        calendars and contacts, perhaps a fast storage. The second one is dedicated to email archives,
+                        and the shared files. This helps you to minimise the storage costs.
                     </p>
                 </div>
             </div>
@@ -269,26 +278,26 @@
 
                 <div class="category" id="granular-role">
                     <h3 class="fg-color-3">Install and uninstall features</h3>
-                    <p>Most feature can be independantly installed and uninstalled, without breaking the system.
-                        For instance, the antivirus can be installed for testing, and then uninstalled.
-                        Each feature is installed using a specific Ansible role. Once a feature is installed,
-                        it is possible to run self-diagnostic tasks to ensure the role has been properly installed.
+                    <p>Most feature can be independantly installed and uninstalled, without breaking the system.  For
+                        instance, the antivirus can be installed for testing, and then uninstalled.  Each feature is
+                        installed using a specific Ansible role. Once a feature is installed, it is possible to run
+                        self-diagnostic tasks to ensure the role has been properly installed.
                     </p>
                 </div>
 
                 <div class="category" id="dev-friendly">
                     <h3 class="fg-color-3">Developer friendly</h3>
-                    <p>One dedicated role to deploy useful tools for diagnostic and development purposes.
-                        Once the development done,the tools can be uninstalled as well.
-                        Each role supports <em>development</em> and <em>debug</em> flags,
-                        that generate specific or just verbose logging configuration.
+                    <p>One dedicated role to deploy useful tools for diagnostic and development purposes.  Once the
+                        development done,the tools can be uninstalled as well.  Each role supports <em>development</em>
+                        and <em>debug</em> flags, that generate specific or just verbose logging configuration.
                     </p>
                 </div>
 
                 <div class="category" id="linting">
                     <h3 class="fg-color-3">Code quality</h3>
-                    <p>To ensure the code quality, each role is checked through ansible-lint before each push, using git-hooks.
-                        Any shell deployed on the server is checked using <em>shellcheck</em> as well, to ensure no errors is contained.
+                    <p>To ensure the code quality, each role is checked through ansible-lint before each push, using
+                        git-hooks.  Any shell deployed on the server is checked using <em>shellcheck</em> as well, to
+                        ensure no errors is contained.
                     </p>
                 </div>
             </div>
