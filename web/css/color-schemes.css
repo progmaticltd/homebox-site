@@ -25,30 +25,37 @@
         color: #515146;
     }
 
+    .fg-color-default {
+        color: #222;
+    }
+
     /* triads from https://www.quackit.com/css/color/tools/css_color_scheme_generator.cfm */
     .bg-color-1 {
-        color: #b4d0d1;
+        background-color: #b4d0d1;
     }
 
     .bg-color-2 {
-        color: #d1b4d0;
+        background-color: #d1b4d0;
     }
 
     .bg-color-3 {
-        color: #d0d1b4;
+        background-color: #d0d1b4;
+    }
+    .bg-color-default {
+        background-color: #fff;
     }
 
     /* triads from https://www.quackit.com/css/color/tools/css_color_scheme_generator.cfm */
     .border-color-1 {
-        color: #b4d0d1;
+        border-color: #b4d0d1;
     }
 
     .border-color-2 {
-        color: #d1b4d0;
+        border-color: #d1b4d0;
     }
 
     .border-color-3 {
-        color: #d0d1b4;
+        border-color: #d0d1b4;
     }
 
     .shadow {
@@ -59,7 +66,7 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
-        background:  #222;
+        background: #222;
         color: #ddd;
         transition: background-color 2s;
     }
@@ -77,31 +84,38 @@
         color: #d0d1b4;
     }
 
+    .fg-color-default {
+        color: #ddd;
+    }
+
     /* triads from https://www.quackit.com/css/color/tools/css_color_scheme_generator.cfm */
     .bg-color-1 {
-        color: #465151;
+        background-color: #465151;
     }
 
     .bg-color-2 {
-        color: #514651;
+        background-color: #514651;
     }
 
     .bg-color-3 {
-        color: #515146;
+        background-color: #515146;
+    }
+    .bg-color-default {
+        background-color: #222;
     }
 
 
     /* triads from https://www.quackit.com/css/color/tools/css_color_scheme_generator.cfm */
     .border-color-1 {
-        color: #465151;
+        border-color: #465151;
     }
 
     .border-color-2 {
-        color: #514651;
+        border-color: #514651;
     }
 
     .border-color-3 {
-        color: #515146;
+        border-color: #515146;
     }
 
     .shadow {

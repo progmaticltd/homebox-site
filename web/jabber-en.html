@@ -7,12 +7,11 @@
         <!--# include file=".include/html-headers.html" -->
         <!-- specific stylesheets -->
         <link rel="stylesheet" media="all" href="/css/features.css">
-        <link rel="stylesheet" media="all" href="/css/jabber.css">
     </head>
     <body>
         <!--# include file=".include/header.html" -->
-        <div>
-            <h1 class="color-primary-0">Jabber server</h1>
+        <section>
+            <h2>Jabber server</h2>
             <p>A Jabber server is installed and configured, and can be used with any XMPP client.
             The following features are supported and configured</p>
             <ul>
@@ -22,21 +21,21 @@
                 <li>Client to server, and server to server communications.</li>
                 <li>File sharing and image previews.</li>
             </ul>
-        </div>
-        <section>
-            <h2>Settings detection with Dino IM</h2>
-            <p>Dino IM (Instant Messenger) is an excellent Jabber client for the Gnome Desktop environment.</p>
-            <div id="dino-setup">
-                <div id="jab-shot-1"><img src="img/jabber-step-1.png" class="screenshot-square" alt="First step"></div>
-                <div id="jab-shot-2"><img src="img/jabber-step-2.png" class="screenshot-square" alt="Second step"></div>
-                <div id="jab-shot-3"><img src="img/jabber-step-3.png" class="screenshot-square" alt="Third step"></div>
-            </div>
         </section>
-        <section>
-            <h2>Example of conversation</h2>
-            <p>Example with Dino IM, with attachment and <em>OMEMO</em> encrypted messages.</p>
-            <img src="img/jabber-dino-talks.png" class="screenshot-landscape" alt="Conversation example">
+
+        <section class="wrapper clear">
+            <h2>Configuring Dino IM on Gnome</h2>
+            <p>
+                The first configuration couldn’t be simpler, just enter your email address and password in the new
+                account settings box.
+            </p>
+            <img src="img/jabber-step-1.png" class="shadow screenshot-square" alt="First step">
+            <img src="img/jabber-step-2.png" class="shadow screenshot-square" alt="Second step">
+            <img src="img/jabber-step-3.png" class="shadow screenshot-square" alt="Connected">
+            <img src="img/jabber-dino-talks.png" class="shadow screenshot-landscape" alt="Conversation example">
         </section>
+
+
         <!--# include file=".include/footer.html" -->
     </body>
 </html>
