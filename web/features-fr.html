@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--# include file=".include/html-headers.html" -->
+        <title>Homebox — caractéristiques</title>
+        <link rel="stylesheet" media="screen" href="/css/page-home.css">
+    </head>
+    <body>
+        <!--# include file=".include/header.html" -->
+        <div class="main-content clear">
+            <section class="clear">
+                <h2 class="fg-color-2">Fonctionnalités système</h2>
+
+                <div class="category" id="debian-run">
+                    <h3 class="fg-color-3">Fonctionne sur Debian</h3>
+                    <p>Fonctionne sur un système Debian standard sans paquets ni fichiers binaires tiers, sans même
+                        utiliser de sections non-free ou contrib. Une seule fonctionnalité facultative peut être
+                        installée à l'aide d'un dépôt tiers, mais <em>toujours</em> reçoit des mises à jour de sécurité.
+                    </p>
+                </div>
+
+                <div class="category" id="tls-encryption">
+                    <h3 class="fg-color-3">Chiffrage TLS fort</h3>
+                    <p>Tous les certificats sont générés automatiquement à l'aide de LetsEncrypt avec la méthode DNS,
+                        plus sûre. Les sites bénéficient automatiquement du grade A+, avec
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>
+                        mis en œuvre pour empêcher l’interception du trafic.
+                    </p>
+                    <p class="details">💡 <a href="strong-tls-fr.html" title="Chiffrage TLS fort">Plus de détails</a></p>
+                </div>
+
+                <div class="category" id="modern-dns">
+                    <h3 class="fg-color-3">Serveur DNS moderne</h3>
+                    <p>Un serveur DNS est implémenté avec des fonctionnalités de pointe. Grâce à
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>,
+                        chaque enregistrement est signé à l'aide d'une infrastructure à clé publique.
+                        <a target="_blank"
+                           href="https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization">Enregistrements
+                           CAA</a>, pour certifier l'origine de vos certificats, empêchant toute autre organisation que
+                           LetsEncrypt de créer des certificats avec votre nom de domaine.
+                    </p>
+                </div>
+
+                <div class="category" id="ssh-fingerprint">
+                    <h3 class="fg-color-3">Empreintes « digitales » SSH</h3>
+                    <p>Pour éviter toute intervention intermédiaire lors de l'utilisation de connexions SSH, les clés
+                        publiques sont publiées sur le serveur DNS, en utilisant <a target="_blank"
+                        href="https://en.wikipedia.org/wiki/SSHFP_record">Enregistrements SSHFP</a>, autrement dit
+                        empreintes digitales SSH. Cela vous permet également d'établir des connexions SSH sans avoir à
+                        gérer le fichier known_hosts.
+                    </p>
+                </div>
+
+                <div class="category" id="authentication-mgmt">
+                    <h3 class="fg-color-3">Source d'authentification unique</h3>
+                    <p>Les utilisateurs sont authentifiés à l'aide de l'annuaire OpenLDAP comme source unique.  Les mots
+                        de passe initiaux sont générés automatiquement et les politiques de mots de passe et l'âge
+                        maximum sont appliqués.  Enfin, les utilisateurs peuvent facilement modifier leur mot de passe à
+                        l'aide d'une interface Web très simple.
+                    </p>
+                </div>
+
+                <div class="category" id="integrated-backup">
+                    <h3 class="fg-color-3">Sauvegarde intégrée</h3>
+                    <p>Le système est livré avec le <a target="_blank" href="https://www.borgbackup.org">système de
+                        sauvegarde borg</a>, configuration pour sauvegarder les e-mails, ainsi que les calendriers et
+                        les contacts de tous les utilisateurs.  Plusieurs destinations de sauvegarde peuvent être
+                        spécifiées, avec plusieurs fréquences également.  Les cibles peuvent être un disque physique
+                        connecté monté dans un répertoire, ou un même système distant, en utilisant Samba ou SFTP.
+                    </p>
+                </div>
+            </section>
+
+            <section class="clear">
+                <h2 class="fg-color-2">Fonctionnalités de sécurité</h2>
+
+                <div class="category" id="app-armor">
+                    <h3 class="fg-color-3">Utilisation d'AppArmor</h3>
+                    <p>Tous les services exécutés sous des profils <a target="_blank"
+                        href="https://www.apparmor.net/">AppArmor</a> dédiés.  Cela protège de manière proactive le
+                        système d'exploitation et les applications contre les menaces externes ou internes, même les
+                        attaques du jour zéro. Il impose un bon comportement et empêche l’exploitation des failles
+                        d’application connues et inconnues.
+                    </p>
+                </div>
+
+                <div class="category" id="auto-updates">
+                    <h3 class="fg-color-3">Mises à jour automatiques</h3>
+                    <p>Les mises à jour standard et de sécurité sont automatiquement installées en utilisant la méthode
+                    Debian standard. Les services sont automatiquement redémarrés en cas de besoin, minimisant la
+                    maintenance tout en augmentant la sécurité.  Le système peut également être configuré pour
+                    redémarrer automatiquement.
+                    </p>
+                </div>
+
+                <div class="category" id="pare-feu">
+                    <h3 class="fg-color-3">Pare-feu puissant</h3>
+                    <p>Les connexions entrantes et sortantes sont filtrées. Pour les connexions sortantes,
+                        seul le trafic nécessaire est autorisé, et un proxy est utilisée, le traffic sortant étant
+                        restreint au maximum. Enfin, les échecs répétés d'authentification banissent
+                        automatiquement les adresses IP.
+                    </p>
+                </div>
+            </section>
+
+            <section class="clear">
+                <h2 class="fg-color-2">Gestion des communications et des informations personnelles</h2>
+
+                <div class="category" id="webmail">
+                    <h3 class="fg-color-3">Interface web réactive</h3>
+                    <p>Vous pouvez accéder à vos e-mails, calendriers et contacts à l'aide d'un navigateur Web moderne,
+                        depuis un ordinateur de bureau ou un client mobile, grâce à l'interface web agréable et réactive
+                        implémentée par <a target="_blank" href="https://sogo.nu/">SOGo</a>.  Pour plus de sécurité, une
+                        authentification facultative à deuxième facteur peut être ajoutée, en utilisant la norme TOTP.
+                    </p>
+                    <p class="details">💡 <a href="sogo-fr.html" title="screenshot">Plus de details ici</a></p>
+                </div>
+
+                <div class="category" id="mail-autoconfig">
+                    <h3 class="fg-color-3">Détection des paramètres de messagerie</h3>
+                    <p>Des enregistrements DNS spéciaux et des paramètres Web sont générés, permettant à tout client de
+                        messagerie moderne de détecter les paramètres.  Fonctionne avec les clients de bureau, comme
+                        Thunderbird, Evolution, Outlook, etc. et les clients mobiles comme <a target="_blank"
+                        href="https://k9mail.app/">K-9 Mail</a> ou
+                        <a target="_blank" href="https://email.faircode.eu/">FairEmail</a>.
+                    </p>
+                    <p class="details">💡 <a href="mail-autoconfig-fr.html" title="screenshot">Voir plus de
+                    détails</a>.</p>
+                </div>
+
+                <div class="category" id="mail-antispam">
+                    <h3 class="fg-color-3">Antispam moderne</h3>
+                    <p>L'antispam choisi est <a href="https://www.rspamd.com/" target="_blank">rspamd</a>, qui est à la
+                        fois puissant et extrêmement simple à utiliser.  Les e-mails reconnus comme indésirables sont
+                        automatiquement placés dans le dossier Courrier indésirable dès leur réception.  Pour les
+                        courriers indésirables manqués, leur déplacement dans le dossier indésirable entraîne
+                        automatiquement le système.  À l'inverse, en déplaçant un e-mail hors du dossier Courrier
+                        indésirable, marquez l'e-mail comme valide, c'est-à-dire <em>ham</em>.
+                    </p>
+                    <p class="details">💡 <a href="mail-antispam-fr.html" title="screenshot">Voir plus de
+                    détails</a></p>
+                </div>
+
+                <div class="category" id="mail-antivirus">
+                    <h3 class="fg-color-3">Antivirus en option</h3>
+                    <p>Vous pouvez utiliser l'excellent antivirus Clam-AV pour vérifier la saisie des emails, ainsi que
+                        ceux envoyés par les utilisateurs. Les e-mails contenant des virus peuvent être supprimés ou
+                        rejetés en silence, tandis que les e-mails sortants contenant des virus sont renvoyés.
+                    </p>
+                </div>
+
+                <div class="category" id="mail-advanced">
+                    <h3 class="fg-color-3">fonctionnalités mails avancés</h3>
+                    <p>Le serveur est configuré avec des fonctionnalités avancées, certaines incluses par défaut,
+                        d'autres facultatives.  Sont inclus par défaut les quotas, les filtres côté serveur, les options
+                        de confidentialité et la copie automatique des messages envoyés. Les fonctions en options sont
+                        par exemple les dossiers virtuels, la recherche en texte intégral, utilisateur principal, etc.
+                    <p class="details">💡 <a href="mail-advanced-fr.html" title="Fonctionnalités avancées">Voir plus de
+                    détails</a></p>
+                </div>
+
+                <div class="category" id="jabber">
+                    <h3 class="fg-color-3">Serveur Jabber</h3>
+                    <p>Vous pouvez également installer un serveur Jabber, qui vous permet d'envoyer des messages à toute
+                        personne utilisant Jabber, sur le même serveur ou sur d'autres domaines. Le serveur prend en
+                        charge les appels audio et vidéo depuis les téléphones mobiles.  Les messages peuvent également
+                        être chiffrés à l'aide d'Omemo ou de GPG, si votre client le prend en charge.
+                    </p>
+                    <p class="details">💡 <a href="jabber-fr.html" title="Serveur Jabber">
+                            Plus de détails
+                    </a></p>
+                </div>
+            </section>
+
+            <section class="clear">
+                <h2 class="fg-color-2">Autres fonctionnalités</h2>
+
+                <div class="category" id="webdav">
+                    <h3 class="fg-color-3">Stockage de fichiers personnels</h3>
+                    <p>Les utilisateurs peuvent stocker et sauvegarder leurs fichiers personnels, depuis un ordinateur
+                        ou depuis un téléphone.  Le protocole utilisé est WebDAV et l'authentification repose sur le
+                        serveur LDAP standard.
+                    </p>
+                </div>
+
+                <div class="category" id="flexible-ip-support">
+                    <h3 class="fg-color-3">Prise en charge IPv6 complète</h3>
+                    <p>Prise en charge soit d'une adresse IPv4 seule, soit d'une adresse IPv6, soit un mélange des deux.
+                        Le système crée et conserve automatiquement tous les enregistrements DNS.
+                    </p>
+                </div>
+
+                <div class="category" id="default-site">
+                    <h3 class="fg-color-3">Site par défaut</h3>
+                    <p>Générez un squelette de site par défaut pour votre domaine.  Cela vous permet de vous concentrer
+                        sur le contenu de votre site sans avoir à gérer la gestion des certificats ni la configuration
+                        de Nginx.
+                    </p>
+                </div>
+
+                <div class="category" id="monitoring">
+                    <h3 class="fg-color-3">Surveillance et alertes</h3>
+                    <p>Surveillance facultative à l'aide de Prometheus et de tableaux de bord Grafana préconfigurés pour
+                        chaque service majeur.  Les alertes sont envoyées à la fois par courrier électronique à une
+                        adresse électronique externe et également via Jabber.
+                    </p>
+                    <p class="details">💡 Plus de détails:
+                        <a href="monitoring-fr.html" title="screenshot">Surveillance</a> /
+                        <a href="alerting-fr.html" title="screenshot">Alertes</a>
+                    </p>
+                </div>
+
+                <div class="category" id="web-keys-directory">
+                    <h3 class="fg-color-3">Répertoire web des clés GPG</h3>
+                    <p>Si vous utilisez GPG, <em>Homebox</em> peut publier automatiquement votre clé publique à l'aide
+                    d'un
+                        <a href="https://wiki.gnupg.org/WKD" target="_blank">répertoire de clés Web</a>.  Vos contacts
+                        pourront retrouver et importer votre clé publique automatiquement, et vous envoyer des emails
+                        chiffrés plus facilement.
+                    </p>
+                    <p class="details">💡 <a href="webkeys-directory-fr.html" title="screenshot">Plus de
+                    details</a>.</p>
+                </div>
+
+                <div class="category" id="dual-storage">
+                    <h3 class="fg-color-3">Deux types de stockage</h3>
+                    <p>La solution prend en charge deux emplacements de stockatge différents. Le premier est dédié aux
+                        e-mails, calendriers et contacts quotidiens, optimisé pour un stockage rapide. Le second est
+                        dédié aux archives des emails et aux fichiers partagés. Cela vous aide à minimiser les coûts de
+                        stockage.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="clear">
+                <h2 class="fg-color-2">Fonctionnalités de développement</h2>
+
+                <div class="category" id="granular-role">
+                    <h3 class="fg-color-3">Modules à la demande</h3>
+                    <p>La plupart des fonctionnalités peuvent être installées et désinstallées indépendamment, sans
+                        interrompre le système. Par exemple, l'antivirus peut être installé à des fins de test, puis
+                        désinstallé.
+                    </p>
+                </div>
+
+                <div class="category" id="dev-friendly">
+                    <h3 class="fg-color-3">Convivial pour les développeurs</h3>
+                    <p>Un rôle dédié pour déployer des outils utiles à des fins de diagnostic et de développement.
+                        Chaque rôle prend en charge les indicateurs <em>développement</em> et <em>debug</em>, qui
+                        génèrent une configuration de journalisation spécifique ou simplement détaillée.
+                    </p>
+                </div>
+
+                <div class="category" id="linting">
+                    <h3 class="fg-color-3">Qualité du code</h3>
+                    <p>Pour garantir la qualité du code, chaque rôle est vérifié via ansible-lint avant chaque push, à
+                        l'aide de git-hooks.  Tout shell déployé sur le serveur est également vérifié à l'aide
+                        de <em>shellcheck</em>, pour garantir qu'aucune erreur n'est contenue.
+                    </p>
+                </div>
+            </section>
+            <div class="clear">&nbsp;</div>
+        </div>
+        <!--# include file=".include/footer.html" -->
+    </body>
+</html>
