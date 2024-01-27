@@ -1,0 +1,12 @@
+/* text explanation */
+div.text-explanations {
+    width: 75%;
+    float: left;
+}
+
+div.carousel {
+    position: relative;
+    filter: drop-shadow(0 0 10px #0003);
+    float: right;
+    width: 25%;
+}

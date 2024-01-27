@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Homebox - Calendars and contacts</title>
+        <!--# include file=".include/html-headers.html" -->
+        <!-- specific stylesheets -->
+        <link rel="stylesheet" href="/css/features.css">
+        <link rel="stylesheet" href="/css/carousel-common.css">
+        <link rel="stylesheet" media="screen and (min-width:800px)" href="/css/carousel-wide.css">
+        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/css/carousel-narrow.css">
+        <link rel="stylesheet" media="screen and (max-width:500px)" href="/css/carousel-thin.css">
+    </head>
+    <body>
+        <!--# include file=".include/header.html" -->
+        <h1>Calendriers et contacts</h1>
+        <p>Cette page vous aidera à accéder aux calendriers et aux contacts depuis n'importe quel client, mobile ou
+            ordinateur, ou depuis un interface Web.</p>
+        <section>
+            <h2>Interface Web</h2>
+            <p>Une fois installé, vous pouvez accéder aux calendriers et aux contacts à l'aide de <em>SOGo</em> une
+                interface Web réactive, à l’adresse <samp>https://sogo.[network.domain]/</samp>.
+            </p>
+            <p>
+                Entre autres choses, vous pouvez accéder aux e-mails, aux contacts, aux calendriers et aux tâches dans
+                un navigateur Web, à partir d'un un ordinateur de bureau ou un appareil mobile.
+            </p>
+            <p>Détails</p>
+            <ul>
+                <li>Rédigez et envoyez des e-mails.</li>
+                <li>Accédez à vos agendas, partagez-les ou déléguez-les avec d'autres membres, ou même abonnez-vous à
+                des agendas en ligne.</li>
+                <li>Créez ou modifiez des événements dans votre liste d'agendas.</li>
+                <li>Accédez à vos carnets d'adresses, partagez-les ou déléguez-les avec d'autres membres.</li>
+                <li>Configurez vos paramètres de messagerie, comme les règles de vacances, de transfert et de
+                filtrage.</li>
+                <li>Modifiez votre mot de passe.</li>
+            </ul>
+            <p>Plus de détails sur le site SOGo, la solution utilisée :
+                <a href="https://www.sogo.nu/about.html#/features"
+                target="_blank">https://www.sogo.nu/about.html#/features</a>
+            </p>
+        </section>
+
+        <section>
+             <h2>Linux</h2>
+             <p>Les clients Linux les plus populaires sont compatibles avec les standards <dfn>CALDAV</dfn>
+             / <dfn>CARDDAV</dfn>.</p>
+             <ul>
+                 <li>Mozilla Thunderbird</li>
+                 <li>Évolution de Gnome</li>
+             </ul>
+        </section>
+
+        <section>
+             <h2>Microsoft Windows</h2>
+             <p>Pour Microsoft Windows, il est recommandé d’utiliser Mozilla Thunderbird, qui prend en charge nativement
+                 les normes <dfn>CALDAV</dfn> / <dfn>CARDDAV</dfn>.</p>
+             <p><a href="https://www.emclient.com/" target="_blank">eM Client</a> est un client de messagerie pour
+             Windows et macOS, qui prend en charge nativement les standards ci-dessus.</p>
+             <p>Pour Microsoft Outlook, vous pouvez utiliser le <a href="https://caldavsynchronizer.org/">caldav
+             synchroniser</a> ouvert plugin source.</p>
+        </section>
+
+        <section>
+            <h2>Appareils Apple</h2>
+            <p>Les appareils Apple prennent en charge nativement les normes. De nombreux tutoriels existent sur
+                internet, et sont renvoyés via
+                une <a href="https://duckduckgo.com/?t=ftsa&q=iphone+caldav+carddav" target="_blank">recherche
+                sur le web</a>.</p>
+        </section>
+
+        <section>
+            <h2>Application <em>DAVx</em> sur Android</h2>
+            <div class="text-explanations">
+                <p><a href="https://www.davx5.com/">DAVx</a> est un logiciel tout-en-un CalDAV/CardDAV/WebDAV gratuit et
+                    open source.  solution, synchronisant les contacts et les calendriers avec votre appareil Android et
+                    le serveur.  Une fois installées et configurées, les applications Android natives auront un accès
+                    transparent au les contacts et les calendriers. Vous pouvez le télécharger depuis
+                    <a target="_blank"
+                    href="https://play.google.com/store/apps/details?id=at.bitfire.davdroid">Google Play</a>.  Une fois
+                    installé, suivez les étapes suivantes pour importer vos calendriers.
+                </p>
+                <ol>
+                    <li><a href="#carousel-slide1">Ajouter un compte sur DAVx</a></li>
+                    <li><a href="#carousel-slide2">Le logiciel DAVx détecte les paramètres</a></li>
+                    <li><a href="#carousel-slide3">Définir le nom du compte</a></li>
+                    <li><a href="#carousel-slide4">Voir la liste des carnets d’adresses</a></li>
+                    <li><a href="#carousel-slide5">Voir la liste des calendriers</a></li>
+                    <li><a href="#carousel-slide6">Abonnez-vous aux calendriers Web (facultatif)</a></li>
+                </ol>
+            </div>
+            <div class="carousel" aria-label="Gallery" id="davx-screenshots">
+                <ol class="carousel-viewport">
+                    <li id="carousel-slide1"
+                        tabindex="0"
+                        class="carousel-slide">
+                        <div class="screenshot-1">
+                            <img class="shadow" src="img/davx-add-account.png" alt="DAVx - ajout d'un compte">
+                        </div>
+                    </li>
+                    <li id="carousel-slide2"
+                        tabindex="0"
+                        class="carousel-slide">
+                        <div class="screenshot-1">
+                            <img class="shadow" src="img/davx-detect-settings.png" alt="DAVx - détection des
+                            paramètres">
+                        </div>
+                    </li>
+                    <li id="carousel-slide3"
+                        tabindex="0"
+                        class="carousel-slide">
+                        <div class="screenshot-1">
+                            <img class="shadow" src="img/davx-account-name.png" alt="Utilisez votre addresse email pour
+                        le nom du compte.">
+                        </div>
+                    </li>
+                    <li id="carousel-slide4"
+                        tabindex="0"
+                        class="carousel-slide">
+                        <div class="screenshot-1">
+                            <img class="shadow" src="img/davx-abook-list.png" alt="DAVx - Liste des calendriers">
+                        </div>
+                    </li>
+                    <li id="carousel-slide5"
+                        tabindex="0"
+                        class="carousel-slide">
+                        <div class="screenshot-1">
+                            <img class="shadow" src="img/davx-calendars-list.png" alt="DAVx - Liste des carnets d’adresse">
+                        </div>
+                    </li>
+                    <li id="carousel-slide6"
+                        tabindex="0"
+                        class="carousel-slide">
+                        <div class="screenshot-1">
+                            <img class="shadow" src="img/davx-webcal.png" alt="DAVx - Sélection d'un carnet d'adresse">
+                        </div>
+                    </li>
+                </ol>
+                <aside class="carousel-navigation">
+                    <ol class="carousel-navigation-list">
+                        <li class="carousel-navigation-item">
+                            <a href="#carousel-slide1"
+                               class="carousel-navigation-button" title="Diapo 1">▢ </a>
+                        </li>
+                        <li class="carousel-navigation-item">
+                            <a href="#carousel-slide2"
+                               class="carousel-navigation-button" title="Diapo 2">▢ </a>
+                        </li>
+                        <li class="carousel-navigation-item">
+                            <a href="#carousel-slide3"
+                               class="carousel-navigation-button" title="Diapo 3">▢ </a>
+                        </li>
+                        <li class="carousel-navigation-item">
+                            <a href="#carousel-slide4"
+                               class="carousel-navigation-button" title="Diapo 4">▢ </a>
+                        </li>
+                        <li class="carousel-navigation-item">
+                            <a href="#carousel-slide5"
+                               class="carousel-navigation-button" title="Diapo 5">▢ </a>
+                        </li>
+                        <li class="carousel-navigation-item">
+                            <a href="#carousel-slide6"
+                               class="carousel-navigation-button" title="Diapo 6">▢ </a>
+                        </li>
+                    </ol>
+                </aside>
+            </div>
+        </section>
+        <p class="clear">Plus de détails sur le standard <a href="https://www.calconnect.org/">standards page</a>.</p>
+        <!--# include file=".include/footer.html" -->
+    </body>
+</html>

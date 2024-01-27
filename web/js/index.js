@@ -1,18 +1,16 @@
 // Detect the browser language
 let lang = navigator.language.substr(0,2);
 
-switch(lang) {
+let address = window.location.href;
 
-case "fr":
-    window.location.replace("https://homebox.space/index-fr.html");
-    break;
+// List of known languages
+let languages = [ "en", "fr" ];
 
-case "en":
-    window.location.replace("https://homebox.space/index-en.html");
-    break;
-
-default:
-    window.location.replace("https://homebox.space/index-en.html");
-    break;
-
+if ( ! languages.includes(lang) ) {
+    console.log("Language not supported: " + lang);
+} else if ( location.pathname != "/" ) {
+    let newAddress = address.replace(/index.html/, ("index-" + lang + ".html"));
+    window.setTimeout(() => { window.location.replace(newAddress) }, 3000);
+} else {
+    window.setTimeout(() => { window.location.replace(address + "index-en.html") }, 3000);
 }

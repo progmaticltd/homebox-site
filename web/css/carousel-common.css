@@ -1,0 +1,86 @@
+.carousel-viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-slide {
+    position: relative;
+    flex: 0 0 100%;
+    counter-increment: item;
+}
+
+.carousel-slide:nth-child(even) {
+}
+
+#davx-screenshots {
+    height: 640px;
+    vertical-align: middle;
+}
+
+div.screenshot-1 {
+    text-align: center;
+}
+
+div.screenshot-1 img {
+    max-height: 580px;
+}
+
+.carousel ol, .carousel li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.carousel-snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 620px;
+    scroll-snap-align: center;
+    vertical-align: middle;
+}
+
+@media (hover: hover) {
+    .carousel-snapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    .carousel-slide:last-child .carousel-snapper {
+        animation-name: tostart, snap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-snapper {
+        animation-name: none;
+    }
+}
+
+.carousel:hover .carousel-snapper,
+.carousel:focus-within .carousel-snapper {
+    animation-name: none;
+}
+
+.carousel-navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.carousel-navigation-list,
+.carousel-navigation-item {
+    display: inline-block;
+}
