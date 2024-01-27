@@ -80,7 +80,11 @@ div.screenshot-1 img {
     text-align: center;
 }
 
-.carousel-navigation-list,
+.carousel-navigation-list {
+    display: inline-block;
+}
+
 .carousel-navigation-item {
     display: inline-block;
+    width: 3ch;
 }
