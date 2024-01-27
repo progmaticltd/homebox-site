@@ -4,5 +4,8 @@ div.text-explanations {
 
 div.carousel {
     position: relative;
-    filter: drop-shadow(0 0 10px #0003);
+}
+
+#davx-screenshots, #evol-screenshots, #thunderbird-screenshots, #k9-screenshots, #fair-screenshots {
+    height: 640px;
 }

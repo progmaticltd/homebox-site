@@ -1,12 +1,15 @@
 /* text explanation */
 div.text-explanations {
-    width: 75%;
+    width: 70%;
     float: left;
 }
 
 div.carousel {
     position: relative;
-    filter: drop-shadow(0 0 10px #0003);
     float: right;
-    width: 25%;
+    width: 30%;
+}
+
+#davx-screenshots, #evol-screenshots, #thunderbird-screenshots, #k9-screenshots, #fair-screenshots {
+    height: 640px;
 }

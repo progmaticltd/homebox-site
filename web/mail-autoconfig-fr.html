@@ -6,54 +6,222 @@
         <title>Homebox - Configuration automatique</title>
         <!--# include file=".include/html-headers.html" -->
         <!-- specific stylesheets -->
-        <link rel="stylesheet" media="all" href="/css/features.css">
+        <link rel="stylesheet" media="screen" href="/css/features.css">
+        <link rel="stylesheet" media="screen" href="/css/carousel-common.css">
+        <link rel="stylesheet" media="screen and (min-width:800px)" href="/css/carousel-wide.css">
+        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/css/carousel-narrow.css">
+        <link rel="stylesheet" media="screen and (max-width:500px)" href="/css/carousel-thin.css">
     </head>
     <body>
         <!--# include file=".include/header.html" -->
         <div>
-            <h1 class="color-primary-0">Detection automatique des paramètres emails</h1>
-            <p>Les paramètres de messagerie sont automatiquement détectés si votre client de messagerie est suffisamment moderne.
-                L’implémentation utilise des enregistrements DNS <a target="_blank" href="https://fr.wikipedia.org/wiki/Enregistrement_de_service">
-                    Enregistrement de services</a>,
-                ainsi que des URIs <a target="_blank" href="https://en.wikipedia.org/wiki/Well-known_URI">well-known</a>.<br />
-                Ci-dessous quelques exemples :</p>
-            <div class="section clear">
-                <h2 class="color-primary-1">Mozilla Thunderbird</h2>
-                <p>
-                    <img class="shadow screenshot-mini" loading="lazy" src="img/mail-settings-detect.png" alt="Thunderbird email settings detection">
-                </p>
-                <p>
-                    <img class="shadow screenshot-mini" loading="lazy" src="img/carddav-caldav-detect.png" alt="Thunderbird calendars and address book settings detection">
-                </p>
-                <br class="clear">
-            </div>
-            <div class="section clear">
-                <h2 class="color-primary-1">Gnome Evolution</h2>
-                <p>
-                    <img class="shadow screenshot-mini" loading="lazy" src="img/evolution-settings-detect.png" alt="Evolution account settings detection">
-                </p>
-                <p>
-                    <img class="shadow screenshot-mini" loading="lazy" src="img/evolution-collection-account.png" alt="Evolution calendars and address book settings detection">
-                </p>
-                <br class="clear">
-            </div>
-            <div class="section clear">
-                <h2 class="color-primary-1">K-9 Mail on Android</h2>
-                <p>
-                    <img class="shadow screenshot-mini" loading="lazy" src="img/k9-imap-detect.png" alt="K-9 on Android imap settings detection">
-                </p>
-                <p>
-                    <img class="shadow screenshot-mini" loading="lazy" src="img/k9-smtp-detect.png" alt="K-9 on Android smtp settings detection">
-                </p>
-                <br class="clear">
-            </div>
-            <div class="section clear">
-                <h2 class="color-primary-1">FairEmail on Android</h2>
-                <p>
-                    <img class="shadow screenshot-mini" loading="lazy" src="img/mail-settings-fairemail.png" alt="FairEmail on Android settings detection">
-                </p>
-                <br class="clear">
-            </div>
+            <h1 class="color-primary-0">Détection automatique des paramètres</h1>
+            <p>Les paramètres de messagerie sont automatiquement détectés si votre client de messagerie est suffisamment
+                moderne. Cela se fait en utilisant DNS <a target="_blank"
+                href="https://fr.wikipedia.org/wiki/Enregistrement_de_service">enregistrements de service</a>, ainsi
+                que <a target="_blank" href="https://en.wikipedia.org/wiki/Well-known_URI">adresses
+                    « well-known »</a>.<br />  Voici quelques exemples :</p>
+
+            <section class="clear">
+                <h2>Mozilla Thunderbird</h2>
+                <div class="text-explanations">
+                    <p>Les versions récentes de Mozilla Thunderbird détecteront automatiquement les paramètres de
+                    messagerie</p>
+                    <p>Detection automatic:</p>
+                    <ol>
+                        <li><a href="#carousel-slide1">Paramètres de réception et d’envoi</a></li>
+                        <li><a href="#carousel-slide2">Calendriers et carnets d’addresses</a></li>
+                    </ol>
+                </div>
+                <div class="carousel" aria-label="Gallery" id="thunderbird-screenshots">
+                    <ol class="carousel-viewport">
+                        <li id="carousel-slide1"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/mail-settings-detect.png" alt="Thunderbird mail settings">
+                            </div>
+                        </li>
+                        <li id="carousel-slide2"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/carddav-caldav-detect.png" alt="Thunderbird calendars and
+                                                                                             contacts detection">
+                            </div>
+                        </li>
+                    </ol>
+                    <aside class="carousel-navigation">
+                        <ol class="carousel-navigation-list">
+                            <li class="carousel-navigation-item">
+                                <a href="#carousel-slide1" class="carousel-navigation-button" title="Slide 1">▢ </a>
+                            </li>
+                            <li class="carousel-navigation-item">
+                                <a href="#carousel-slide2" class="carousel-navigation-button" title="Slide 2">▢ </a>
+                            </li>
+                        </ol>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="clear">
+                <h2>Gnome Evolution</h2>
+                <div class="text-explanations">
+                    <p>GNOME Evolution est le gestionnaire officiel d'informations personnelles pour GNOME. C'est un
+                        officiel fait partie de GNOME depuis qu'Evolution 2.0 a été inclus avec la version GNOME 2.8 en
+                        septembre 2004. Il combine des fonctionnalités de courrier électronique, de carnet d'adresses,
+                        de calendrier, de liste de tâches et de prise de notes. Son interface utilisateur et la
+                        fonctionnalité est similaire à celle de Microsoft Outlook.</p>
+                    <p>Détection automatique de Gnome Evolution :</p>
+                    <ol>
+                        <li><a href="#evolution-slide1">Selectionner « Nouveau compte de collection »</a>.</li>
+                        <li><a href="#evolution-slide2">Les calendriers et les carnets d’adresses sont automatiquement
+                        détectés</a>.</li>
+                    </ol>
+                </div>
+                <div class="carousel" aria-label="Gallery" id="evol-screenshots">
+                    <ol class="carousel-viewport">
+                        <li id="evolution-slide1"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/evolution-settings-detect.png" alt="Evolution mail settings">
+                            </div>
+                        </li>
+                        <li id="evolution-slide2"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/evolution-collection-account.png" alt="Evolution calendars">
+                            </div>
+                        </li>
+                    </ol>
+                    <aside class="carousel-navigation">
+                        <ol class="carousel-navigation-list">
+                            <li class="carousel-navigation-item">
+                                <a href="#evolution-slide1" class="carousel-navigation-button" title="Slide 1">▢ </a>
+                            </li>
+                            <li class="carousel-navigation-item">
+                                <a href="#evolution-slide2" class="carousel-navigation-button" title="Slide 2">▢ </a>
+                            </li>
+                        </ol>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="clear">
+                <h2>Android - K9-Mail</h2>
+                <div class="text-explanations">
+                    <p>K-9 Mail est un client de messagerie gratuit et open source pour Android. Il est conçu comme une
+                    alternative aux clients de messagerie standard inclus avec la plateforme ; il prend en charge les
+                    protocoles POP3 et IMAP et prend en charge IMAP IDLE pour les notifications en temps réel.</p>
+                    <ol>
+                        <li><a href="#k9-slide1">Entrez votre adresse email</a>.</li>
+                        <li><a href="#k9-slide2">Entrez votre mot de passe</a>.</li>
+                        <li><a href="#k9-slide3">Sélectionnez IMAP</a></li>
+                        <li><a href="#k9-slide4">Les paramètres de réception sont automatiquement détectés</a></li>
+                        <li><a href="#k9-slide5">Les paramètres d’envoi sont automatiquement détectés</a></li>
+                    </ol>
+                </div>
+                <div class="carousel" aria-label="Gallery" id="k9-screenshots">
+                    <ol class="carousel-viewport">
+                        <li id="k9-slide1"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/k9-email-enter.png" alt="K9 mail settings">
+                            </div>
+                        </li>
+                        <li id="k9-slide2"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/k9-password-enter.png" alt="SMTP parameters detection">
+                            </div>
+                        </li>
+                        <li id="k9-slide3"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/k9-imap-select.png" alt="SMTP parameters detection">
+                            </div>
+                        </li>
+                        <li id="k9-slide4"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/k9-smtp-detect.png" alt="SMTP parameters detection">
+                            </div>
+                        </li>
+                        <li id="k9-slide5"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/k9-smtp-detect.png" alt="SMTP parameters detection">
+                            </div>
+                        </li>
+                    </ol>
+                    <aside class="carousel-navigation">
+                        <ol class="carousel-navigation-list">
+                            <li class="carousel-navigation-item">
+                                <a href="#k9-slide1" class="carousel-navigation-button" title="Slide 1">▢ </a>
+                            </li>
+                            <li class="carousel-navigation-item">
+                                <a href="#k9-slide2" class="carousel-navigation-button" title="Slide 2">▢ </a>
+                            </li>
+                            <li class="carousel-navigation-item">
+                                <a href="#k9-slide3" class="carousel-navigation-button" title="Slide 3">▢ </a>
+                            </li>
+                            <li class="carousel-navigation-item">
+                                <a href="#k9-slide4" class="carousel-navigation-button" title="Slide 4">▢ </a>
+                            </li>
+                            <li class="carousel-navigation-item">
+                                <a href="#k9-slide5" class="carousel-navigation-button" title="Slide 5">▢ </a>
+                            </li>
+                        </ol>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="clear">
+                <h2>Android - FairEmail</h2>
+                <div class="text-explanations">
+                    <p>FairEmail est un bon client de messagerie pour Android, axé sur la sécurité et la
+                    confidentialité. La configuration est assez simple et les paramètres sont automatiquement
+                    détectés.</p>
+                    <ol>
+                        <li><a href="#fair-slide1">Guide</a></li>
+                        <li><a href="#fair-slide2">Détection des paramètre</a></li>
+                        <li><a href="#fair-slide3"></a>Détection des paramètre complète</li>
+                    </ol>
+                </div>
+                <div class="carousel" aria-label="Gallery" id="fair-screenshots">
+                    <ol class="carousel-viewport">
+                        <li id="fair-slide1"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/fairemail-settings-wizard.png" alt="Wizard">
+                            </div>
+                        </li>
+                        <li id="fair-slide2"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/fairemail-settings-detection.png" alt="Settings detection">
+                            </div>
+                        </li>
+                        <li id="fair-slide3"
+                            tabindex="0" class="carousel-slide">
+                            <div class="screenshot-1">
+                                <img class="shadow" src="img/fairemail-settings-enter.png" alt="Settings detected">
+                            </div>
+                        </li>
+                    </ol>
+                    <aside class="carousel-navigation">
+                        <ol class="carousel-navigation-list">
+                            <li class="carousel-navigation-item">
+                                <a href="#fair-slide1" class="carousel-navigation-button" title="Slide 1">▢ </a>
+                            </li>
+                            <li class="carousel-navigation-item">
+                                <a href="#fair-slide2" class="carousel-navigation-button" title="Slide 2">▢ </a>
+                            </li>
+                            <li class="carousel-navigation-item">
+                                <a href="#fair-slide3" class="carousel-navigation-button" title="Slide 3">▢ </a>
+                            </li>
+                        </ol>
+                    </aside>
+                </div>
+            </section>
         </div>
         <!--# include file=".include/footer.html" -->
     </body>

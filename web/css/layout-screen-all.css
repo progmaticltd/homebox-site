@@ -56,4 +56,5 @@ div.main-content {
 .clear {
     clear:both;
     display: block;
+    overflow:auto;
 }

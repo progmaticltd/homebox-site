@@ -4,32 +4,34 @@
     left: 0;
     right: 0;
     display: flex;
-    overflow-x: scroll;
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
 }
 
 .carousel-slide {
     position: relative;
     flex: 0 0 100%;
     counter-increment: item;
+    list-style-type: none;
 }
 
 .carousel-slide:nth-child(even) {
 }
 
-#davx-screenshots {
-    height: 640px;
-    vertical-align: middle;
+#davx-screenshots, #evol-screenshots, #thunderbird-screenshots, #k9-screenshots, #fair-screenshots {
+    overflow: hidden;
 }
 
 div.screenshot-1 {
     text-align: center;
+    padding: 10pt;
 }
 
 div.screenshot-1 img {
     max-height: 580px;
+    max-width: 100%;
 }
 
 .carousel ol, .carousel li {
@@ -43,28 +45,8 @@ div.screenshot-1 img {
     position: absolute;
     top: 0;
     left: 0;
-    height: 620px;
     scroll-snap-align: center;
     vertical-align: middle;
-}
-
-@media (hover: hover) {
-    .carousel-snapper {
-        animation-name: tonext, snap;
-        animation-timing-function: ease;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-    }
-
-    .carousel-slide:last-child .carousel-snapper {
-        animation-name: tostart, snap;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .carousel-snapper {
-        animation-name: none;
-    }
 }
 
 .carousel:hover .carousel-snapper,
