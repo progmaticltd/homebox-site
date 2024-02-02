@@ -3,10 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Homebox - Automatic configuration</title>
+        <title>Homebox - Serveur Jabber</title>
         <!--# include file=".include/html-headers.html" -->
         <!-- specific stylesheets -->
         <link rel="stylesheet" media="all" href="/css/features.css">
+        <link rel="stylesheet" href="/css/carousel-common.css">
+        <link rel="stylesheet" media="screen and (min-width:800px)" href="/css/carousel-wide.css">
+        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/css/carousel-narrow.css">
+        <link rel="stylesheet" media="screen and (max-width:500px)" href="/css/carousel-thin.css">
+        <link rel="stylesheet" href="/css/page-jabber.css">
     </head>
     <body>
         <!--# include file=".include/header.html" -->
@@ -23,16 +28,42 @@
              </ul>
         </section>
 
-        <section>
-            <h2>Détection des paramètres avec Dino</h2>
-            <p>Dino IM <em>Instant Messenger</em> est un excellent client Jabber pour l’environnement de bureau Gnome.</p>
-            <details>
-                <summary>Screenshots</summary>
-                <img loading="lazy" src="img/jabber-step-1.png" class="shadow screenshot-square" alt="First step">
-                <img loading="lazy" src="img/jabber-step-2.png" class="shadow screenshot-square" alt="Second step">
-                <img loading="lazy" src="img/jabber-step-3.png" class="shadow screenshot-square" alt="Connected">
-                <img loading="lazy" src="img/jabber-dino-talks.png" class="shadow screenshot-landscape" alt="Conversation example">
-            </details>
+        <section class="clear">
+            <h2>Dino IM</h2>
+            <div class="text-explanations">
+                <p>Dino IM <em>Instant Messenger</em> est un excellent client Jabber pour l’environnement de bureau
+                Gnome.</p>
+                <ol>
+                    <li><a href="#carousel-slide1">Entrez votre adresse email.</a></li>
+                    <li><a href="#carousel-slide2">Entrez votre mot de passe.</a></li>
+                    <li><a href="#carousel-slide3">Vous devriez maintenant être connecté.</a></li>
+                </ol>
+            </div>
+            <div class="carousel" aria-label="Gallery" id="jabber-screenshots">
+                <ol class="carousel-viewport">
+                    <li id="carousel-slide1"
+                        tabindex="0"
+                        class="carousel-slide clear">
+                        <div class="screenshot-1">
+                            <img src="img/jabber-step-1.png" class="shadow" alt="First step">
+                        </div>
+                    </li>
+                    <li id="carousel-slide2"
+                        tabindex="0"
+                        class="carousel-slide clear">
+                        <div class="screenshot-1">
+                            <img src="img/jabber-step-2.png" class="shadow" alt="Second step">
+                        </div>
+                    </li>
+                    <li id="carousel-slide3"
+                        tabindex="0"
+                        class="carousel-slide clear">
+                        <div class="screenshot-1">
+                            <img src="img/jabber-step-3.png" class="shadow" alt="Connected">
+                        </div>
+                    </li>
+                </ol>
+            </div>
         </section>
         <!--# include file=".include/footer.html" -->
     </body>

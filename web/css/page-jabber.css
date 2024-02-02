@@ -1,0 +1,19 @@
+
+@media only screen and (min-width: 800px) {
+    #jabber-screenshots {
+        height: 300px;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    #jabber-screenshots {
+        height: 500px;
+    }
+    #jabber-screenshots img {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #jabber-screenshots {
+        height: 350px;
+    }
+}

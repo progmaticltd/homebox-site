@@ -20,10 +20,6 @@
 .carousel-slide:nth-child(even) {
 }
 
-#davx-screenshots, #evol-screenshots, #thunderbird-screenshots, #k9-screenshots, #fair-screenshots {
-    overflow: hidden;
-}
-
 div.screenshot-1 {
     text-align: center;
     padding: 10pt;
