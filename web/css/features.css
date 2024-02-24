@@ -22,3 +22,7 @@ img.screenshot-landscape {
     margin: 2em 5%;
     border-radius: 10pt;
 }
+
+pre.email {
+    white-space: pre-line;
+}
