@@ -3,6 +3,9 @@
     #jabber-screenshots {
         height: 300px;
     }
+    #conversations-screenshots {
+        height: 1530px;
+    }
 }
 @media only screen and (min-width: 500px) and (max-width: 800px) {
     #jabber-screenshots {
@@ -11,9 +14,18 @@
     #jabber-screenshots img {
         width: 80%;
     }
+    #conversations-screenshots {
+        height: 700px;
+    }
+    #conversations-screenshots img {
+        width: 80%;
+    }
 }
 @media only screen and (max-width: 500px) {
     #jabber-screenshots {
+        height: 350px;
+    }
+    #conversations-screenshots {
         height: 350px;
     }
 }
