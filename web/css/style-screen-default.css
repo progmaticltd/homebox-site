@@ -14,14 +14,3 @@ h3 {
 p,li {
     font-size: 13pt;
 }
-
-pre {
-    border: 1pt solid;
-    padding: 4pt;
-    max-width: 80%;
-    margin: 1em 10%;
-    white-space: pre-line;
-    overflow-wrap: normal;
-    white-space: pre;
-    overflow: auto;
-}

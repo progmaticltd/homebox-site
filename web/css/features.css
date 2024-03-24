@@ -28,5 +28,5 @@ pre.email {
 }
 
 pre.termshot, code {
-    white-space: pre-line;
+    white-space: pre;
 }

@@ -19,7 +19,7 @@ a.no-decoration {
 }
 
 header div {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #7775;
 }
 
 /* Details */
@@ -42,4 +42,23 @@ samp.chars {
     font-family: monospace;
     border: 1px dotted;
     letter-spacing: 1pt;
+}
+
+
+pre {
+    border: 1pt solid #7775;
+    border-radius: 4pt;
+    padding: 4pt;
+    max-width: 90%;
+    margin: 1em 5%;
+    white-space: pre-line;
+    overflow-wrap: normal;
+    white-space: pre;
+    background-color: #7772;
+}
+
+pre code {
+    white-space: pre-line;
+    overflow: auto;
+    text-overflow: ellipsis;
 }

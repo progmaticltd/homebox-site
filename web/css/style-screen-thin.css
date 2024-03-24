@@ -16,7 +16,7 @@ p,li {
 }
 
 pre {
-    border: 1pt solid;
+    border: 1pt solid #7775;
     padding: 4pt;
     max-width: 100%;
     margin: 1em 0;
