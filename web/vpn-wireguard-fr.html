@@ -42,7 +42,15 @@
             faille « Zero Day » ou une vulnérabilité inconnue.
         </p>
 
-        <h2>Configuration des clients</h2>
+        <h3>Contourner le filtrage DNS des FAI</h3>
+        <p>
+            Certains fournisseurs de services Internet ajustent, voire modifient les réponses DNS, ou forcent parfois
+            l’utilisation de leurs serveurs DNS spécifiques, notoirement non sécurisés. Le serveur DNS utilisé par le
+            VPN valide les enregistrements DNSSEC, ne modifie pas les réponses et ne partage les journaux d’accès avec
+            aucune organisation gouvernementale.
+        </p>
+
+         <h2>Configuration des clients</h2>
 
         <p>Lors de l’exécution du playbook, les fichiers de configuration client sont générés dans le
             dossier <em>archives</em> pour chaque utilisateur et donc accessible via n’importe quel client WebDAV.</p>
