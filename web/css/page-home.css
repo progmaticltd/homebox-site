@@ -1,6 +1,5 @@
 /* Styles specific for the home page */
 h1 {
-    text-align: center;
     font-variant: small-caps;
     font-size: 24pt;
     letter-spacing: 1pt;
@@ -19,7 +18,6 @@ hgroup p {
 }
 
 h2 {
-    text-align: center;
     letter-spacing: 1pt;
     padding-top: 2em;
 }

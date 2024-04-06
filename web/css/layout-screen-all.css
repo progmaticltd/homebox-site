@@ -1,7 +1,19 @@
 /* Layout for screen common to all sizes */
 
 /* Header styles */
-header div {
+header {
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "path lang";
+}
+
+header #path-toolbar {
+    grid-area: path;
+}
+
+header #lang-toolbar {
+    grid-area: lang;
     text-align: right;
 }
 

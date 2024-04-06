@@ -5,6 +5,10 @@ body {
     font-family: "Garamond", serif;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* links */
 a {
     opacity: 0.8;
@@ -18,7 +22,7 @@ a.no-decoration {
     border: none;
 }
 
-header div {
+header {
     border-bottom: 1px solid #7775;
 }
 
@@ -61,8 +65,4 @@ pre code {
     white-space: pre-line;
     overflow: auto;
     text-overflow: ellipsis;
-}
-
-section.clear h2 {
-    border-bottom: 2pt solid #7775;
 }

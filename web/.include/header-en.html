@@ -1,0 +1,22 @@
+<header>
+    <div id="path" id="path-toolbar">
+        <p>
+        <!--# if expr="$request_uri = /features\/.*\/index.*/" -->
+            <span><a href="/index-en.html">Home</a></span>
+            / <span><a href="/features/index-en.html">Features</a></span>
+            / <span id="path-current">...</span>
+        <!--# elif expr="$request_uri = /features.*index.*/" -->
+            <span><a href="/index-en.html">Home</a></span>
+            / <span>Features</span>
+        <!--# elif expr="$request_uri = /.*index.*/" -->
+            <span>Home page</span>
+        <!--# endif -->
+        </p>
+    </div>
+    <div id="lang-toolbar" class="color-pimary-1">
+        <ul id="languages">
+            <li><a href="#" id="menu-link-en" class="active"><span class="flag">🇬🇧</span> <span class="lang-name">English</span></a></li>
+            <li><a href="/index-fr.html" id="menu-link-fr"><span class="flag">🇫🇷</span> <span class="lang-name">Français</span></a></li>
+        </ul>
+    </div>
+</header>

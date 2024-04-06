@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--# include file="/.include/html-headers.html" -->
+        <title>Homebox — self-hosting</title>
+        <link rel="stylesheet" media="screen" href="/css/features.css">
+    </head>
+    <body>
+        <!--# include file="/.include/header-fr.html" -->
+        <h1 class="fg-color-1">Serveur VPN Wireguard</h1>
+
+        <p>Le serveur VPN peut être configuré pour acheminer tout le trafic du client ou pour restreindre le trafic vers
+            le serveur lui-même. Dans les deux cas, les adresses IPv4 et IPv6 sont entièrement prises en charge.</p>
+
+        <h2>Modes de fonctionnement</h2>
+
+        <h3>Mode de base</h3>
+        <p>
+            Également connu sous le nom de « split tunneling », ce mode oblige uniquement le VPN à accéder aux services
+            du serveur, les autres le trafic passe par la passerelle standard du client.
+        </p>
+
+        <h3>Mode complet</h3>
+        <p>
+            Dans ce mode, tout le trafic passe par le serveur, masquant complètement l’adresse IP du client.
+        </p>
+
+        <h2>Avantages</h2>
+
+        <h3>Restreindre les services d'authentification aux clients VPN</h3>
+
+        <p>
+            Une fois le VPN installé, vous pouvez configurer certains services systèmes, comme la soumission d’emails
+            (postfix) l’accès IMAP et POP3 (dovecot), Jabber, Grafana, WebDAV, etc... pour être uniquement accessible
+            via le VPN. Si ces services sont sécurisés, les exposer sur internet génère parfois beaucoup de trafic de la
+            part des robots qui essayent diverses attaques, notamment par force brute de mot de passe.
+        </p>
+
+        <h3>Deuxième couche de protection</h3>
+        <p>
+            Cela vous protège également si votre serveur est ciblé par des méthodes d’attaques plus avancées, comme une
+            faille « Zero Day » ou une vulnérabilité inconnue.
+        </p>
+
+        <h3>Contourner le filtrage DNS des FAI</h3>
+        <p>
+            Certains fournisseurs de services Internet ajustent, voire modifient les réponses DNS, ou forcent parfois
+            l’utilisation de leurs serveurs DNS spécifiques, notoirement non sécurisés. Le serveur DNS utilisé par le
+            VPN valide les enregistrements DNSSEC, ne modifie pas les réponses et ne partage les journaux d’accès avec
+            aucune organisation gouvernementale.
+        </p>
+
+         <h2>Configuration des clients</h2>
+
+        <p>Lors de l’exécution du playbook, les fichiers de configuration client sont générés dans le
+            dossier <em>archives</em> pour chaque utilisateur et donc accessible via n’importe quel client WebDAV.</p>
+
+        <ul>
+            <li>Fichier de configuration pour l’exécutable <samp>wg-quick</samp>.</li>
+            <li>QR Code à scanner sur un téléphone.</li>
+        </ul>
+
+        <details>
+            <summary>Example de QR Code pour un téléphone:</summary>
+            <p>
+                <img class="shadow screenshot-square" loading="lazy" src="/img/vpn-client-qrcode.png"
+                     alt="Exemple de QR Code a scanner pour un téléphone">
+            </p>
+        </details>
+
+        <h2>Support IPv6 complet</h2>
+
+        <p>
+            Le VPN vous propose également des adresses IP statiques, aussi bien en IPv4 qu’en IPv6, qui peuvent être
+            utiles lorsque vous en avez besoin. Le support d’IPv6 est complet et ne nécessite aucune configuration
+            spécifique, aussi bien sur un ordinateur que sur un téléphone mobile.
+
+            <img class="shadow screenshot-square" loading="lazy" src="/img/vpn-ipv6-test-page.png"
+                 alt="Test IPv6 adresse depuis un ordinateur de bureau">
+        </p>
+    </body>
+</html>

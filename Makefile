@@ -19,10 +19,15 @@ publish: perms
 	rsync -ar --delete --chown=root:root web/ root@voodoo.homebox.space:/var/www/default
 
 # preview the site in a docker instance, used for local development.
-.PHONY: preview-start preview-stop
+.PHONY: preview-start preview-stop preview-restart
+
 preview-restart: preview-stop preview-start
+
 preview-start: perms
 	docker build -t homebox-site .
-	docker run -d -v ${work_dir}/web/:/usr/share/nginx/html:ro -p 8005:80 homebox-site
+	docker run -d -v ${work_dir}/web/:/usr/share/nginx/html:ro \
+		--mount type=bind,source=${work_dir}/logs,target=/var/log/nginx \
+		-p 8005:80 homebox-site
+
 preview-stop:
 	docker stop `docker ps -a -q  --filter ancestor=homebox-site`
