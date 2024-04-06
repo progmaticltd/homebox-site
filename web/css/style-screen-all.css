@@ -62,3 +62,7 @@ pre code {
     overflow: auto;
     text-overflow: ellipsis;
 }
+
+section.clear h2 {
+    border-bottom: 2pt solid #7775;
+}

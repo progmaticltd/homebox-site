@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--# include file=".include/html-headers.html" -->
+        <title>Homebox — self-hosting</title>
+        <link rel="stylesheet" media="screen" href="/css/features.css">
+    </head>
+    <body>
+        <!--# include file=".include/header.html" -->
+        <h1 class="fg-color-1">Wireguard VPN server</h1>
+
+        <p>The VPN server can be configured to route all the traffic from the client, or to restrict the traffic to the
+        server itself. In both case, both IPv4 and IPv6 addresses are fully supported.</p>
+
+        <h2>Operating modes</h2>
+
+        <h3>Basic mode</h3>
+        <p>
+            Also known as split tunneling, this mode only enforce the VPN to access the server services, the other
+            traffic goes through the client’s standard gateway.
+        </p>
+
+        <h3>Enforce traffic</h3>
+        <p>
+            In this mode, all the traffic is passing through the server, completely hiding the client IP address.
+        </p>
+
+        <h2>Advantages</h2>
+
+        <h3>Restrict authentication services to the VPN</h3>
+
+        <p>
+            Once the VPN is installed, you can the configure some of the system services, like postfix submission,
+            dovecot imap and pop3 access, jabber, grafana, webdav, etc... to be only accessible through the VPN.
+            While these services are secure, exposing them on internet sometimes generate a lot of traffic from bots
+            trying various password brute force attacks.
+        </p>
+
+        <h3>Second layer of protection</h3>
+        <p>
+            This is also protecting you if your server is targetted by more advanced attacks methods, like zero-day
+            or unknown vulnerabilities.
+        </p>
+
+        <h2>Clients configuration</h2>
+
+        <p>When running the playbook, the client configuration files are generated in the <em>archives</em> folder for
+        each user, therefore, accessible through any WebDAV client.</p>
+
+        <ul>
+            <li>Configuration file for <samp>wg-quick</samp> executable.</li>
+            <li>QR Code to be scanned on a phone.</li>
+        </ul>
+
+        <details>
+            <summary>Sample of QR code for a mobile phone:</summary>
+            <p>
+                <img class="shadow screenshot-square" loading="lazy" src="img/vpn-client-qrcode.png"
+                     alt="Sample of QR code for a mobile phone">
+            </p>
+        </details>
+
+        <h2>Full IPv6 support</h2>
+        <p>
+            The VPN also offers you static IP addresses, both in IPv4 and IPv6, which can be useful when you need
+            one. The support for IPv6 is complete and does not require any specific configuration, on desktop or on a
+            mobile phone.
+
+            <img class="shadow screenshot-square" loading="lazy" src="img/vpn-ipv6-test-page.png" alt="Test IPv6
+            address from a desktop">
+        </p>
+
+    </body>
+</html>
