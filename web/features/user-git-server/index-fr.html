@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Homebox - Serveur git personnel pour chaque utilisateur</title>
+        <!--# include file="/.include/html-headers.html" -->
+        <!-- specific stylesheets -->
+        <link rel="stylesheet" href="/css/features.css">
+        <link rel="stylesheet" href="/css/carousel-common.css">
+        <link rel="stylesheet" media="screen and (min-width:800px)" href="/css/carousel-wide.css">
+        <link rel="stylesheet" media="screen and (min-width:500px) and (max-width:800px)" href="/css/carousel-narrow.css">
+        <link rel="stylesheet" media="screen and (max-width:500px)" href="/css/carousel-thin.css">
+    </head>
+    <body>
+        <!--# include file="/.include/header-en.html" -->
+        <h1>Serveur git personnel</h1>
+        <p>Vous pouvez installer un serveur git personnel pour chaque utilisateur, principalement utile pour les projets
+           personnels ou les fichiers initialisation.</p>
+        <section class="clear">
+            <h2>Serveur serveur Git</h2>
+            <ul>
+                <li>Les dépôts sont accessibles via SSH, pas de front-end web.</li>
+                <li>Les dépôts Git sont automatiquement créés lors du premier push.</li>
+                <li>Validation des noms de dépôts</li>
+                <li>Les dépôts sont stockés dans <samp>/home/archives</samp> par défaut.</li>
+            </ul>
+        </section>
+
+        <section class="clear">
+            <h2>Exemple de configuration</h2>
+            <pre>
+                <code>
+                    users:
+                      - uid: alice
+                        [...]
+                        ssh:
+                          - comment: git-custom-key
+                            type: ssh-ed25519
+                            data: AAAAC3NzaC1lZDI1NTE5AAAAUmspI/sxaHxkpPx0KCunUwhtWdX8ERWwyl/CHfPVxDYu
+                            usage: git
+                      - uid: bob
+                        [...]
+                        ssh:
+                          - comment: git-custom-key
+                            type: ssh-ed25519
+                            data: AAAAC3NzaC1lrVT63F9QZDe3O9iqLYI1swRgGAcEHBo2zIhj42iisEbzQXxbpwEufmbS
+                            usage: git
+                </code>
+            </pre>
+        </section>
+
+        <section class="clear">
+            <h2>Utilisation</h2>
+            <pre>
+                <code>
+                    git remote add perso alice@domain.com:repo-name.git
+                    git push --all --tags perso
+                </code>
+            </pre>
+        </section>
+        <!--# include file="/.include/footer.html" -->
+    </body>
+</html>
