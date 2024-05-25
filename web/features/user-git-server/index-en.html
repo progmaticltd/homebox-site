@@ -15,34 +15,39 @@
     <body>
         <!--# include file="/.include/header-en.html" -->
         <h1>Personal git server</h1>
-        <p>You can install a personal git server for each user, mostly useful for personal projects or dot files.</p>
+
+        <p>Because not every git project has to be hosted on the big cloud providers, you can create a personal git
+          server for each user. This is very useful for small personal projects, dot files (e.g. .bashrc, etc.) or
+          text files backups.</p>
+
         <section class="clear">
             <h2>Git server server</h2>
             <ul>
                 <li>Repositories are accessed over SSH only, no web front-end.</li>
                 <li>Git repositories are automatically created on first push.</li>
                 <li>Repository names validation.</li>
-                <li>Repositories are stored in <samp>/home/archives</samp> by default.</li>
-                <li>Directory and files are only readable by the user.</li>
+                <li>Repositories are stored in <samp>/home/archives/$USER/git/repositories</samp>.</li>
+                <li>Directory and files are only readable and writable by the original user.</li>
+                <li>SSH certificates and configuration files dynamically generated and sent by email.</li>
             </ul>
         </section>
 
         <section class="clear">
             <h2>Configuration example</h2>
-            <pre>
+            <pre class="termshot">
                 <code>
                     users:
                       - uid: alice
                         [...]
                         ssh:
-                          - comment: git-custom-key
+                          - comment: git-2024
                             type: ssh-ed25519
                             data: AAAAC3NzaC1lZDI1NTE5AAAAUmspI/sxaHxkpPx0KCunUwhtWdX8ERWwyl/CHfPVxDYu
                             usage: git
                       - uid: bob
                         [...]
                         ssh:
-                          - comment: git-custom-key
+                          - comment: git-2024
                             type: ssh-ed25519
                             data: AAAAC3NzaC1lrVT63F9QZDe3O9iqLYI1swRgGAcEHBo2zIhj42iisEbzQXxbpwEufmbS
                             usage: git
@@ -51,11 +56,47 @@
         </section>
 
         <section class="clear">
-            <h2>Usage</h2>
-            <pre>
+            <h2>Generated configuration sample</h2>
+            <pre class="termshot">
+                <code>
+                    Host git.homebox.me
+                      Hostname hansolo.homebox.me
+                      VerifyHostKeyDNS yes
+                      User alice
+                      IdentityFile ~/.ssh/git-2024
+                      CertificateFile ~/.ssh/git-2024-cert.pub
+                      HostKeyAlias pigment.homebox.me
+                      PasswordAuthentication no
+                </code>
+            </pre>
+        </section>
+
+        <section class="clear">
+            <h2>Create a repository</h2>
+            <pre class="termshot">
                 <code>
                     git remote add personal alice@domain.com:repo-name.git
                     git push --all --tags personal
+                </code>
+            </pre>
+        </section>
+
+        <section class="clear">
+            <h2>List existing repositories</h2>
+            <pre class="termshot">
+                <code>
+                    ssh git.domain.com repo list
+
+                    Repositories list
+                    Repository         | Size | Accessed            | Modified
+                    ---                | ---  | ---                 | ---
+                    manuscript.git     | 15M  | 2024-05-23 11:52:55 | 2024-05-23 11:53:08
+                    homebox.git        | 11M  | 2024-05-20 17:56:10 | 2024-05-20 18:02:28
+                    go-exercises.git   | 200K | 2024-05-07 07:22:04 | 2024-05-07 07:22:04
+                    ansible-gpg.git    | 144K | 2024-05-06 19:52:26 | 2024-05-06 19:52:26
+                    rust-exercises.git | 152K | 2024-05-06 19:33:41 | 2024-05-06 19:33:41
+                    homebox-site.git   | 8.3M | 2024-05-06 14:48:53 | 2024-05-06 14:48:53
+                    rodier.me.git      | 6.8M | 2024-05-06 08:48:21 | 2024-05-06 08:48:21
                 </code>
             </pre>
         </section>

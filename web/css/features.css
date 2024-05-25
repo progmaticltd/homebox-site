@@ -26,7 +26,3 @@ img.screenshot-landscape {
 pre.email {
     white-space: pre-line;
 }
-
-pre.termshot, code {
-    white-space: pre;
-}

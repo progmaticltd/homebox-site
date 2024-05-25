@@ -55,11 +55,11 @@ pre {
     padding: 4pt;
     max-width: 90%;
     margin: 1em 5%;
-    white-space: pre-line;
     overflow-wrap: normal;
-    white-space: pre;
+    white-space: preserve;
     background-color: #7772;
 }
+
 
 pre code {
     white-space: pre-line;
